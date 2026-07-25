@@ -1,0 +1,133 @@
+﻿catalog_version: 1
+purpose: >-
+  Cross-repository frontend implementation map. Backend flow documents remain
+  the technical source of truth; this catalog identifies frontend responsibility
+  and stable capability IDs for audit.
+
+flows:
+  - id: FLOW-BACK-OFFICE-SETUP
+    title: Platform, organization, store, kiosk, account, and initial catalog setup
+    backend_flow: ../../../IceBot-Backend/docs/flows/BACK_OFFICE_SETUP_FLOW.md
+    product_journey: ../../product/actors-and-scope/ORGANIZATION_STORE_KIOSK_OPERATING_MODEL.md
+    frontend:
+      IceBot-WebApp: [CAP-WEB-IDENTITY-AND-SCOPE, CAP-WEB-TENANT-ONBOARDING, CAP-WEB-SETUP-READINESS]
+      IceBot-Kiosk: []
+      IceBot-Mobile: [CAP-MOBILE-STAFF-IDENTITY-AND-SCOPE]
+
+  - id: FLOW-MANAGEMENT-READ
+    title: Scoped management read models and dashboards
+    backend_flow: ../../../IceBot-Backend/docs/flows/MANAGEMENT_READ_FLOW.md
+    product_journey: ../../product/operating-model/WORKSPACE_AND_DASHBOARD_MODEL.md
+    frontend:
+      IceBot-WebApp: [CAP-WEB-WORKSPACE-DASHBOARD]
+      IceBot-Kiosk: []
+
+  - id: FLOW-CATALOG-RUNTIME-MENU
+    title: Catalog authoring, menu sellability, and kiosk runtime menu
+    backend_flow: ../../../IceBot-Backend/docs/flows/CATALOG_RUNTIME_MENU_FLOW.md
+    product_journey: ../../product/journeys/CUSTOMER_ORDER_AND_FULFILLMENT.md
+    frontend:
+      IceBot-WebApp: [CAP-WEB-CATALOG-AND-MENU-AUTHORING]
+      IceBot-Kiosk: [CAP-KIOSK-RUNTIME-MENU]
+
+  - id: FLOW-CHECKOUT-EXECUTION
+    title: Customer checkout, payment, fulfillment progress, and pickup
+    backend_flow: ../../../IceBot-Backend/docs/flows/CHECKOUT_EXECUTION_FLOW.md
+    product_journey: ../../product/journeys/CUSTOMER_ORDER_AND_FULFILLMENT.md
+    frontend:
+      IceBot-WebApp: [CAP-WEB-ORDER-PAYMENT-OPERATIONS]
+      IceBot-Kiosk: [CAP-KIOSK-CHECKOUT-AND-PAYMENT, CAP-KIOSK-ORDER-TRACKING]
+
+  - id: FLOW-PRODUCTION-INCIDENT-RESOLUTION
+    title: Unknown, partial, defective output, remake, compensation, and audit
+    backend_flow: ../../../IceBot-Backend/docs/flows/PRODUCTION_INCIDENT_RESOLUTION_FLOW.md
+    product_journey: ../../product/journeys/CUSTOMER_ORDER_AND_FULFILLMENT.md
+    frontend:
+      IceBot-WebApp: [CAP-WEB-PRODUCTION-INCIDENT-RESOLUTION]
+      IceBot-Kiosk: [CAP-KIOSK-FULFILLMENT-ISSUE-PRESENTATION]
+
+  - id: FLOW-OPERATIONS-SUPPORT
+    title: Kiosk/device/runtime/inventory operational support
+    backend_flow: ../../../IceBot-Backend/docs/flows/OPERATIONS_SUPPORT_FLOW.md
+    product_journey: ../../product/journeys/TECHNICAL_OPERATIONS.md
+    frontend:
+      IceBot-WebApp: [CAP-WEB-KIOSK-READINESS, CAP-WEB-INVENTORY-OPERATIONS, CAP-WEB-TECHNICAL-DIAGNOSTICS]
+      IceBot-Kiosk: []
+
+  - id: FLOW-ALERT-LIFECYCLE
+    title: Operational alert acknowledgement and resolution
+    backend_flow: ../../../IceBot-Backend/docs/flows/ALERT_LIFECYCLE_FLOW.md
+    product_journey: ../../product/journeys/TECHNICAL_OPERATIONS.md
+    frontend:
+      IceBot-WebApp: [CAP-WEB-ALERT-OPERATIONS]
+      IceBot-Kiosk: []
+
+  - id: FLOW-MAINTENANCE-TICKET
+    title: Maintenance ticket lifecycle
+    backend_flow: ../../../IceBot-Backend/docs/flows/MAINTENANCE_TICKET_FLOW.md
+    product_journey: ../../product/journeys/TECHNICAL_OPERATIONS.md
+    frontend:
+      IceBot-WebApp: [CAP-WEB-MAINTENANCE-OPERATIONS]
+      IceBot-Kiosk: []
+
+  - id: FLOW-ROBOT-LUA-ARTIFACT
+    title: Artifact/template/technical-contract lifecycle
+    backend_flow: ../../../IceBot-Backend/docs/flows/ROBOT_LUA_ARTIFACT_FLOW.md
+    product_journey: ../../product/journeys/ROBOT_AUTHORING_WORKSPACE.md
+    frontend:
+      IceBot-WebApp: [CAP-WEB-ADVANCED-ROBOT-AUTHORING]
+      IceBot-Kiosk: []
+
+  - id: FLOW-ROBOT-LUA-AUTHORING-IMPORT
+    title: Guided Fairino bundle import to release draft
+    backend_flow: ../../../IceBot-Backend/docs/flows/ROBOT_LUA_AUTHORING_AND_IMPORT_FLOW.md
+    product_journey: ../../product/journeys/ROBOT_AUTHORING_WORKSPACE.md
+    frontend:
+      IceBot-WebApp: [CAP-WEB-GUIDED-ROBOT-AUTHORING]
+      IceBot-Kiosk: []
+
+  - id: FLOW-ROBOT-LUA-DEPLOYMENT
+    title: Release activation, artifact delivery, and deployment monitoring
+    backend_flow: ../../../IceBot-Backend/docs/flows/ROBOT_LUA_DEPLOYMENT_AND_ACTIVATION_FLOW.md
+    product_journey: ../../product/journeys/TECHNICAL_OPERATIONS.md
+    frontend:
+      IceBot-WebApp: [CAP-WEB-RELEASE-AND-DEPLOYMENT]
+      IceBot-Kiosk: []
+
+  - id: FLOW-PRODUCTION-PACKAGE-INSTALLATION
+    title: Production Package discovery, preview, installation, repair, and workspace
+    backend_flow: ../../../IceBot-Backend/docs/flows/PRODUCTION_PACKAGE_INSTALLATION_FLOW.md
+    product_journey: ../../product/journeys/PRODUCTION_PACKAGE_LIFECYCLE.md
+    frontend:
+      IceBot-WebApp: [CAP-WEB-PACKAGE-INSTALLATION]
+      IceBot-Kiosk: []
+
+  - id: FLOW-PRODUCTION-PACKAGE-UPGRADE
+    title: Production Package preview, successor review, cutover, abandon, and rollback
+    backend_flow: ../../../IceBot-Backend/docs/flows/PRODUCTION_PACKAGE_UPGRADE_FLOW.md
+    product_journey: ../../product/journeys/PRODUCTION_PACKAGE_LIFECYCLE.md
+    frontend:
+      IceBot-WebApp: [CAP-WEB-PACKAGE-UPGRADE]
+      IceBot-Kiosk: []
+
+  - id: FLOW-FAILURE-ROUTING
+    title: Failure ownership and recovery routing
+    backend_flow: ../../../IceBot-Backend/docs/flows/FAILURE_FLOW_INDEX.md
+    product_journey: ../../product/journeys/TECHNICAL_OPERATIONS.md
+    frontend:
+      IceBot-WebApp: [CAP-WEB-FAILURE-ROUTING]
+      IceBot-Kiosk: [CAP-KIOSK-RECOVERABLE-ERRORS]
+
+  - id: FLOW-SYSTEM-OVERVIEW
+    title: Backend system ownership overview
+    backend_flow: ../../../IceBot-Backend/docs/flows/SYSTEM_OVERVIEW_FLOW.md
+    product_journey: ../../product/OVERVIEW.md
+    frontend:
+      none: true
+
+  - id: FLOW-SYSTEM-INDEX
+    title: Backend flow routing index
+    backend_flow: ../../../IceBot-Backend/docs/flows/SYSTEM_FLOWS.md
+    product_journey: ../../product/OVERVIEW.md
+    frontend:
+      none: true

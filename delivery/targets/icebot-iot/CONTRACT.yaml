@@ -1,0 +1,17 @@
+target:
+  id: IceBot-IOT
+  kind: iot-runtime
+  repository_path: ../../../../IceBot-IOT
+  technology: C# / .NET Framework 4.7.2, Fairino SDK, local peripherals
+  audience: IoT/robot runtime contributor
+  status: repository-present; Cloud/Edge integration incomplete
+  related_flows: [FLOW-CHECKOUT-EXECUTION, FLOW-OPERATIONS-SUPPORT, FLOW-ROBOT-LUA-DEPLOYMENT, FLOW-FAILURE-ROUTING]
+  operation_ids: [OP-REST-POST-API-V-BY-VERSION-IOT-EXECUTION-ENDPOINTS-BY-ENDPOINTID-COMMANDS-PULL, OP-REST-POST-API-V-BY-VERSION-IOT-EXECUTION-ENDPOINTS-BY-ENDPOINTID-COMMANDS-BY-COMMANDID-ACK, OP-REST-POST-API-V-BY-VERSION-IOT-EXECUTION-ENDPOINTS-BY-ENDPOINTID-READINESS, OP-REST-POST-API-V-BY-VERSION-IOT-EXECUTION-ENDPOINTS-BY-ENDPOINTID-COMMANDS-BY-COMMANDID-REPORTS, OP-REST-POST-API-V-BY-VERSION-IOT-EXECUTION-ENDPOINTS-BY-ENDPOINTID-HEARTBEAT, OP-REST-POST-API-V-BY-VERSION-IOT-EXECUTION-ENDPOINTS-BY-ENDPOINTID-TELEMETRY-EVENTS, OP-REST-POST-API-V-BY-VERSION-IOT-EXECUTION-ENDPOINTS-BY-ENDPOINTID-DEVICE-EVENTS, OP-REST-GET-API-V-BY-VERSION-IOT-EXECUTION-ENDPOINTS-BY-ENDPOINTID-PRODUCTION-SYNC-CHECKPOINT, OP-REST-POST-API-V-BY-VERSION-IOT-EXECUTION-ENDPOINTS-BY-ENDPOINTID-PRODUCTION-SYNC-STATE-SUMMARIES, OP-REST-POST-API-V-BY-VERSION-IOT-EXECUTION-ENDPOINTS-BY-ENDPOINTID-PRODUCTION-SYNC-EVENTS]
+  responsibilities:
+    - authenticate as one provisioned execution endpoint when Cloud integration is enabled
+    - pull and deduplicate commands; MQTT is wake-up only
+    - persist state before ACK and report durable execution evidence
+    - recover through replay, checkpoint, and state-summary contracts
+    - reject unsafe execution when local persistence/readiness is unhealthy
+  required_sources: [../../playbooks/ROLE_IMPLEMENTATION_CONTRACT.md, ../../catalogs/MESSAGE_CATALOG.yaml, ../../../../IceBot-Backend/docs/iot/IOT_CONTRACT.md, ../../../../IceBot-Backend/docs/iot/EDGE_COMMAND_CONTRACT.md, ../../../../IceBot-Backend/docs/iot/EDGE_SYNC_TELEMETRY_CONTRACT.md]
+  evidence_targets: [code/src/IceBot/Networking, code/src/IceBot/Workflow, command inbox/local state, execution scheduler, telemetry outbox, restart/storage-failure tests]

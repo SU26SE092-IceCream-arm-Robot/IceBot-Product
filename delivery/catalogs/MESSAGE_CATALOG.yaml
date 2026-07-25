@@ -1,0 +1,55 @@
+﻿catalog_version: 1
+purpose: >-
+  Stable cross-repository index for current Edge/Cloud messages. Exact schemas,
+  authentication, retries, and version rules remain in the linked backend IoT
+  contracts. This catalog indexes message intent, not copied JSON.
+
+messages:
+  - id: MSG-MQTT-COMMAND-AVAILABLE
+    direction: Cloud-to-Edge
+    transport: MQTT QoS 1 wake-up
+    purpose: Notify one execution endpoint that it must pull commands.
+    authority: Wake-up only; authenticated pull remains delivery authority.
+    contract: ../../../IceBot-Backend/docs/iot/EDGE_COMMAND_CONTRACT.md
+  - id: MSG-EDGE-COMMAND-PULL
+    direction: Edge-to-Cloud
+    transport: HTTPS
+    purpose: Pull durable deployment and order execution commands.
+    authority: Cloud command store; deduplicate by commandId.
+    contract: ../../../IceBot-Backend/docs/iot/EDGE_COMMAND_CONTRACT.md
+  - id: MSG-EDGE-COMMAND-ACK
+    direction: Edge-to-Cloud
+    transport: HTTPS
+    purpose: Acknowledge receipt or rejection without claiming runtime completion.
+    authority: Cloud command lifecycle.
+    contract: ../../../IceBot-Backend/docs/iot/EDGE_COMMAND_CONTRACT.md
+  - id: MSG-EDGE-EXECUTION-REPORT
+    direction: Edge-to-Cloud
+    transport: HTTPS
+    purpose: Report validated physical execution evidence.
+    authority: Cloud production-execution projection after ingest.
+    contract: ../../../IceBot-Backend/docs/iot/EDGE_COMMAND_CONTRACT.md
+  - id: MSG-EDGE-TELEMETRY-BATCH
+    direction: Edge-to-Cloud
+    transport: HTTPS
+    purpose: Replay heartbeat, device-event, and local-log evidence.
+    authority: Destination evidence stores; eventId provides idempotency.
+    contract: ../../../IceBot-Backend/docs/iot/EDGE_SYNC_TELEMETRY_CONTRACT.md
+  - id: MSG-EDGE-PRODUCTION-HISTORY
+    direction: Edge-to-Cloud
+    transport: HTTPS
+    purpose: Replay durable production history with a contiguous checkpoint.
+    authority: Cloud production-event checkpoint; sequence is per Edge origin.
+    contract: ../../../IceBot-Backend/docs/iot/EDGE_SYNC_TELEMETRY_CONTRACT.md
+  - id: MSG-EDGE-STATE-SUMMARY
+    direction: Edge-to-Cloud
+    transport: HTTPS
+    purpose: Recover current runtime/readiness state after reconnect or restart.
+    authority: Edge evidence; Cloud derives its central projection.
+    contract: ../../../IceBot-Backend/docs/iot/EDGE_SYNC_TELEMETRY_CONTRACT.md
+  - id: MSG-CLOUD-UI-REALTIME
+    direction: Cloud-to-human UI
+    transport: SignalR
+    purpose: Project validated Cloud state to kiosk and management UI.
+    authority: Cloud read models only; never drives robot execution.
+    contract: ../../../IceBot-Backend/docs/iot/IOT_CONTRACT.md

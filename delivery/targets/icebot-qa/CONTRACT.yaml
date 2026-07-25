@@ -1,0 +1,11 @@
+target:
+  id: IceBot-QA
+  kind: qa
+  repository_path: ../../../../IceBot-Backend/tests
+  audience: QA/test contributor
+  responsibilities:
+    - prove happy and material failure paths for requested vertical slices
+    - verify scope, idempotency, retry, concurrency, lifecycle, and recovery evidence
+    - report contract gaps rather than encode invented behavior in tests
+  required_sources: [../../playbooks/ROLE_IMPLEMENTATION_CONTRACT.md, ../../catalogs/FLOW_CATALOG.yaml, ../../../../IceBot-Backend/docs/process/VERTICAL_SLICE_REVIEW.md]
+  evidence_targets: [unit tests, integration tests, explicit failure scenario coverage]

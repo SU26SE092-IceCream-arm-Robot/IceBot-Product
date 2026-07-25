@@ -1,0 +1,11 @@
+target:
+  id: IceBot-Backend
+  kind: backend
+  repository_path: ../../../../IceBot-Backend
+  audience: Backend/API/domain contributor
+  responsibilities:
+    - preserve product actor, scope, lifecycle, and failure contracts
+    - expose typed contracts with authorization, tenancy, idempotency, and transaction evidence
+    - publish generated operation evidence after route changes
+  required_sources: [../../playbooks/ROLE_IMPLEMENTATION_CONTRACT.md, ../../catalogs/FLOW_CATALOG.yaml, ../../catalogs/OPERATION_CATALOG.json, ../../catalogs/MESSAGE_CATALOG.yaml, ../../../../IceBot-Backend/AGENTS.md]
+  evidence_targets: [src/WebAPI, src/Application, src/Domain, src/Infrastructure, tests]

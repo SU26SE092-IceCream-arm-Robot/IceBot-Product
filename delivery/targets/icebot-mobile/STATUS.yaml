@@ -1,0 +1,11 @@
+registry_version: 1
+target: IceBot-Mobile
+last_acknowledged_change_id: BASELINE
+last_audited_ref: not-yet-audited
+status_note: >-
+  Baseline contract created before an evidence-backed Mobile repository audit.
+  Cash collection/confirmation is intentionally not an assigned capability yet.
+
+capabilities:
+  - id: CAP-MOBILE-STAFF-IDENTITY-AND-SCOPE
+    status: unverified

@@ -1,0 +1,8 @@
+catalog_version: 1
+baseline_id: BASELINE
+purpose: >-
+  Append one entry whenever a confirmed product journey, flow responsibility,
+  API/message behavior, or required client state changes in a way another
+  repository must review. This is an impact ledger, not a commit log.
+
+changes: []

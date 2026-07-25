@@ -1,0 +1,120 @@
+target:
+  id: IceBot-Kiosk
+  kind: frontend
+  repository_path: ../../../../IceBot-Kiosk
+  technology: Flutter
+  audience: Customer at one kiosk
+  allowed_backend_surfaces:
+    - customer kiosk runtime menu
+    - customer order and payment APIs
+    - customer order-access read/realtime contracts
+  forbidden_backend_surfaces:
+    - management APIs
+    - internal administration and diagnostics
+    - provider webhooks
+    - Edge command APIs
+  audit_status: unverified
+
+capabilities:
+  - id: CAP-KIOSK-RUNTIME-MENU
+    flow: FLOW-CATALOG-RUNTIME-MENU
+    actor: Customer
+    scope: kiosk
+    entry: Kiosk startup and menu screen
+    backend_operations:
+      - read kiosk runtime menu
+      - refresh sellability when menu/runtime state changes
+    operation_ids: [OP-REST-GET-API-V-BY-VERSION-KIOSKS-BY-KIOSKID-RUNTIME-MENU]
+    required_states:
+      - loading
+      - kiosk unavailable
+      - store closed
+      - kiosk not accepting orders
+      - empty menu
+      - sellable menu
+    evidence_targets:
+      - lib/features/kiosk/presentation/screens/menu_screen.dart
+      - lib/features/kiosk/data/repositories/menu_repository.dart
+      - lib/features/kiosk/data/models/runtime_menu_models.dart
+
+  - id: CAP-KIOSK-CHECKOUT-AND-PAYMENT
+    flow: FLOW-CHECKOUT-EXECUTION
+    actor: Customer
+    scope: kiosk and one customer order
+    entry: Product detail, cart, checkout, and payment screens
+    backend_operations:
+      - place order
+      - create payment session
+      - cancel or expire unpaid checkout only according to backend state
+    operation_ids: [OP-REST-POST-API-V-BY-VERSION-ORDERS, OP-REST-POST-API-V-BY-VERSION-ORDERS-BY-ORDERID-PAYMENT-SESSIONS, OP-REST-POST-API-V-BY-VERSION-ORDERS-BY-ORDERID-CANCEL]
+    required_states:
+      - empty cart
+      - request in progress
+      - validation failure
+      - idempotent retry-safe submission
+      - payment pending
+      - payment expired or failed
+      - payment confirmed
+    evidence_targets:
+      - lib/features/kiosk/presentation/screens/cart_screen.dart
+      - lib/features/kiosk/presentation/screens/checkout_screen.dart
+      - lib/features/kiosk/presentation/screens/payment_screen.dart
+      - lib/features/kiosk/data/repositories/order_repository.dart
+      - lib/features/kiosk/data/repositories/payment_repository.dart
+
+  - id: CAP-KIOSK-ORDER-TRACKING
+    flow: FLOW-CHECKOUT-EXECUTION
+    actor: Customer
+    scope: one customer order through order-access capability
+    entry: Order tracking screen after payment session creation
+    backend_operations:
+      - read order/payment/fulfillment state with customer order access
+      - consume supported realtime event or contract-defined polling fallback
+    operation_ids: [OP-REST-GET-API-V-BY-VERSION-ORDERS-BY-ORDERID, OP-REST-GET-API-V-BY-VERSION-ORDERS-BY-ORDERID-PAYMENT-STATUS]
+    required_states:
+      - payment pending
+      - preparing
+      - ready for pickup
+      - support required
+      - fulfillment issue
+      - access token expired or invalid
+      - reconnecting or polling fallback
+    evidence_targets:
+      - lib/features/kiosk/presentation/screens/order_tracking_screen.dart
+      - lib/features/kiosk/presentation/state/kiosk_controller.dart
+      - lib/features/kiosk/data/models/order_models.dart
+
+  - id: CAP-KIOSK-FULFILLMENT-ISSUE-PRESENTATION
+    flow: FLOW-PRODUCTION-INCIDENT-RESOLUTION
+    actor: Customer
+    scope: one customer order
+    entry: Order tracking exception state
+    backend_operations:
+      - render customer-safe fulfillment outcome only
+    operation_ids: [OP-REST-GET-API-V-BY-VERSION-ORDERS-BY-ORDERID]
+    required_states:
+      - partial output remains distinguishable from whole-order completion
+      - support-required message
+      - no raw command, checksum, or diagnostics data
+    evidence_targets:
+      - lib/features/kiosk/presentation/screens/order_tracking_screen.dart
+      - lib/features/kiosk/presentation/widgets/kiosk_error_panel.dart
+
+  - id: CAP-KIOSK-RECOVERABLE-ERRORS
+    flow: FLOW-FAILURE-ROUTING
+    actor: Customer
+    scope: kiosk or one customer order
+    entry: Any kiosk interaction
+    backend_operations:
+      - follow current error and retry semantics only
+    operation_ids: [OP-REST-GET-API-V-BY-VERSION-KIOSKS-BY-KIOSKID-RUNTIME-MENU, OP-REST-POST-API-V-BY-VERSION-ORDERS, OP-REST-POST-API-V-BY-VERSION-ORDERS-BY-ORDERID-PAYMENT-SESSIONS, OP-REST-GET-API-V-BY-VERSION-ORDERS-BY-ORDERID]
+    required_states:
+      - network unavailable
+      - retryable read failure
+      - non-retryable checkout failure
+      - no duplicate order/payment creation after retry
+      - recovery path back to a safe screen
+    evidence_targets:
+      - lib/core/error
+      - lib/core/network
+      - lib/features/kiosk/presentation/widgets/kiosk_error_panel.dart

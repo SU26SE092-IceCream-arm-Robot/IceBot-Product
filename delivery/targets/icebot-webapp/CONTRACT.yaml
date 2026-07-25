@@ -1,0 +1,178 @@
+target:
+  id: IceBot-WebApp
+  kind: frontend
+  repository_path: ../../../../IceBot-WebApp
+  technology: Next.js, React, TypeScript
+  audience: SystemAdmin, OrgAdmin, Manager, Staff, Technician
+  allowed_backend_surfaces:
+    - management REST commands
+    - management GraphQL read models
+    - identity and current-account APIs
+  forbidden_backend_surfaces:
+    - customer kiosk order APIs except explicitly authorized support reads
+    - IoT ingest and provider webhook APIs
+    - direct Edge command transport
+  audit_status: unverified
+
+capabilities:
+  - id: CAP-WEB-IDENTITY-AND-SCOPE
+    flow: FLOW-BACK-OFFICE-SETUP
+    actor: SystemAdmin, OrgAdmin, Manager, Staff, Technician
+    scope: effective assigned scope
+    entry: login, invitation acceptance, account/role screens
+    backend_operations: [authenticate, accept invitation, read current account, manage scoped roles]
+    required_states: [unauthenticated, invitation invalid or expired, no assigned scope, permission denied, session expired]
+    evidence_targets: [src/app/(auth), src/lib/services/auth.ts, src/lib/rbac.ts, src/lib/services/accounts.ts]
+
+  - id: CAP-WEB-TENANT-ONBOARDING
+    flow: FLOW-BACK-OFFICE-SETUP
+    actor: SystemAdmin, OrgAdmin
+    scope: global or assigned organization
+    entry: organization, store, and kiosk setup screens
+    backend_operations: [manage organization, store, kiosk, device catalog, configuration prerequisites]
+    required_states: [no scope, no stores, no kiosks, invalid hierarchy, mutation pending, authorization denied]
+    evidence_targets: [src/app/(dashboard)/organizations, src/app/(dashboard)/stores, src/app/(dashboard)/kiosks, src/lib/services/organizations.ts, src/lib/services/stores.ts]
+
+  - id: CAP-WEB-SETUP-READINESS
+    flow: FLOW-BACK-OFFICE-SETUP
+    actor: OrgAdmin, Manager, Technician
+    scope: organization, store, kiosk
+    entry: readiness workspace
+    backend_operations: [read setup readiness, navigate to permitted remediation]
+    required_states: [loading, no scope, incomplete setup, blocked technical prerequisite, ready]
+    evidence_targets: [src/app/(dashboard)/readiness, src/lib/services/setup-readiness.ts, src/lib/readiness]
+
+  - id: CAP-WEB-WORKSPACE-DASHBOARD
+    flow: FLOW-MANAGEMENT-READ
+    actor: SystemAdmin, OrgAdmin, Manager, Staff, Technician
+    scope: effective selected scope
+    entry: dashboard and scoped navigation
+    backend_operations: [management GraphQL reads, scoped dashboard reads]
+    required_states: [loading, no assigned scope, no data, partial permission, stale/read failure]
+    evidence_targets: [src/app/(dashboard)/dashboard, src/lib/services/dashboard-overview.ts, src/components/features/dashboard]
+
+  - id: CAP-WEB-CATALOG-AND-MENU-AUTHORING
+    flow: FLOW-CATALOG-RUNTIME-MENU
+    actor: SystemAdmin, OrgAdmin, Manager
+    scope: global or assigned organization/store/kiosk
+    entry: product, variant, option, recipe, menu, and menu-item workspace
+    backend_operations: [manage catalog, manage recipes, manage product options, manage menus, review sellability]
+    required_states: [draft versus active, scope selection, invalid option/recipe binding, unavailable menu item, mutation pending]
+    evidence_targets: [src/app/(dashboard)/menu, src/lib/services/menu-management.ts, src/components/features/menu]
+
+  - id: CAP-WEB-ORDER-PAYMENT-OPERATIONS
+    flow: FLOW-CHECKOUT-EXECUTION
+    actor: OrgAdmin, Manager, Staff
+    scope: organization, store, kiosk
+    entry: transaction/order operation workspace
+    backend_operations: [read scoped order, payment, execution evidence, perform permitted support actions]
+    required_states: [payment pending, paid preparing, ready, support required, fulfillment issue, duplicate payment intervention]
+    evidence_targets: [src/app/(dashboard)/transactions, src/lib/services/transactions.ts, src/lib/services/payments.ts, src/components/features/transactions]
+
+  - id: CAP-WEB-PRODUCTION-INCIDENT-RESOLUTION
+    flow: FLOW-PRODUCTION-INCIDENT-RESOLUTION
+    actor: Manager, Staff, Technician
+    scope: assigned organization/store/kiosk and exact order
+    entry: order/transaction incident workspace
+    backend_operations: [inspect incident, deliver good output, request exact remake, request compensation, record resolution]
+    required_states: [outcome unknown, partial output, defective output, inspection pending, remake eligibility, compensation pending, resolved]
+    evidence_targets: [src/components/features/transactions, src/lib/services/transactions.ts, src/types/transactions.ts]
+
+  - id: CAP-WEB-KIOSK-READINESS
+    flow: FLOW-OPERATIONS-SUPPORT
+    actor: OrgAdmin, Manager, Staff, Technician
+    scope: kiosk
+    entry: kiosk detail and readiness workspace
+    backend_operations: [read kiosk sales state, runtime/device/readiness, perform permitted sales-state change]
+    required_states: [store closed, kiosk paused, maintenance, cleaning, restocking, out of service, active fulfillment remains visible]
+    evidence_targets: [src/app/(dashboard)/kiosks, src/lib/services/kiosk-detail.ts, src/lib/services/kiosk-telemetry.ts, src/components/features/kiosks]
+
+  - id: CAP-WEB-INVENTORY-OPERATIONS
+    flow: FLOW-OPERATIONS-SUPPORT
+    actor: Manager, Staff, Technician
+    scope: kiosk
+    entry: inventory and topology screens
+    backend_operations: [read topology/readiness, refill, adjust, rebind under policy, view history]
+    required_states: [missing ingredient, inactive container, device unavailable, calibration missing, mutation conflict, history empty]
+    evidence_targets: [src/app/(dashboard)/inventory, src/lib/services/inventory.ts, src/components/features/inventory]
+
+  - id: CAP-WEB-TECHNICAL-DIAGNOSTICS
+    flow: FLOW-OPERATIONS-SUPPORT
+    actor: Technician
+    scope: kiosk
+    entry: kiosk technical diagnostics view
+    backend_operations: [read diagnostics, telemetry, logs, deployment evidence under diagnostics permission]
+    required_states: [permission denied, no evidence, runtime unhealthy, storage unhealthy, stale telemetry]
+    evidence_targets: [src/lib/services/kiosk-telemetry.ts, src/lib/services/kiosk-detail.ts, src/components/features/kiosks]
+
+  - id: CAP-WEB-ALERT-OPERATIONS
+    flow: FLOW-ALERT-LIFECYCLE
+    actor: OrgAdmin, Manager, Staff, Technician
+    scope: effective assigned scope
+    entry: alert list and detail
+    backend_operations: [list scoped alerts, acknowledge, resolve, view allowed evidence]
+    required_states: [new, acknowledged, resolved, duplicate/correlated occurrence, no permission, no alerts]
+    evidence_targets: [src/app/(dashboard)/alerts, src/lib/services/alerts.ts, src/components/features/alerts]
+
+  - id: CAP-WEB-MAINTENANCE-OPERATIONS
+    flow: FLOW-MAINTENANCE-TICKET
+    actor: Manager, Staff, Technician
+    scope: kiosk
+    entry: maintenance list and detail
+    backend_operations: [create, assign, update, resolve, and read scoped maintenance tickets]
+    required_states: [open, assigned, in progress, resolved, cancelled where supported, no permission]
+    evidence_targets: [src/app/(dashboard)/maintenance, src/lib/services/maintenance.ts, src/components/features/maintenance]
+
+  - id: CAP-WEB-ADVANCED-ROBOT-AUTHORING
+    flow: FLOW-ROBOT-LUA-ARTIFACT
+    actor: SystemAdmin, Technician
+    scope: global template or assigned organization
+    entry: explicitly labelled advanced technical authoring screens
+    backend_operations: [manage templates, contracts, artifacts, programs, review lifecycle]
+    required_states: [draft, published, retired, usage blocked, immutable published resource, technical permission denied]
+    evidence_targets: [src/app, src/lib/services]
+
+  - id: CAP-WEB-GUIDED-ROBOT-AUTHORING
+    flow: FLOW-ROBOT-LUA-AUTHORING-IMPORT
+    actor: Technician, permitted OrgAdmin or Manager
+    scope: organization and optional physical target
+    entry: guided authoring workspace
+    backend_operations: [stage import, read workspace, validate, materialize, compose, publish resources, create release draft]
+    required_states: [uploaded, validation errors, warnings, composition blocked, published resources, release draft, deployment blocker]
+    evidence_targets: [src/app, src/lib/services]
+
+  - id: CAP-WEB-RELEASE-AND-DEPLOYMENT
+    flow: FLOW-ROBOT-LUA-DEPLOYMENT
+    actor: Technician, permitted OrgAdmin or Manager
+    scope: kiosk and release
+    entry: release/deployment review workspace
+    backend_operations: [review release, publish release, preview endpoint eligibility, deploy, rollback, observe activation]
+    required_states: [draft, published, endpoint ineligible, pending activation, active, failed, rollback pending]
+    evidence_targets: [src/app, src/lib/services]
+
+  - id: CAP-WEB-PACKAGE-INSTALLATION
+    flow: FLOW-PRODUCTION-PACKAGE-INSTALLATION
+    actor: OrgAdmin, Manager
+    scope: organization
+    entry: package catalog, preview, installation, and workspace
+    backend_operations: [list catalog, preview, install, read workspace, retry, repair, fork]
+    required_states: [no package, preview blocker, materializing, failed, ready for review, installed, fork required]
+    evidence_targets: [src/app, src/lib/services]
+
+  - id: CAP-WEB-PACKAGE-UPGRADE
+    flow: FLOW-PRODUCTION-PACKAGE-UPGRADE
+    actor: OrgAdmin, Manager, Technician
+    scope: organization installation
+    entry: upgrade preview/detail/cutover/rollback workspace
+    backend_operations: [preview, materialize successor, inspect, cutover, abandon, rollback]
+    required_states: [preview stale, materializing, ready for review, cutover blocked, rollback pending, abandoned, completed]
+    evidence_targets: [src/app, src/lib/services]
+
+  - id: CAP-WEB-FAILURE-ROUTING
+    flow: FLOW-FAILURE-ROUTING
+    actor: OrgAdmin, Manager, Staff, Technician
+    scope: effective assigned scope
+    entry: operational error and support surfaces
+    backend_operations: [route user to owning operational workflow without exposing internal diagnostics by default]
+    required_states: [retryable, manual intervention required, permission denied, dependency unavailable]
+    evidence_targets: [src/lib, src/components/features]

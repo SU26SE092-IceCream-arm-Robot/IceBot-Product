@@ -1,0 +1,45 @@
+registry_version: 1
+target: IceBot-WebApp
+last_acknowledged_change_id: BASELINE
+last_audited_ref: not-yet-audited
+status_note: >-
+  Baseline created before an evidence-backed repository audit. Do not interpret
+  unverified as implemented or missing.
+
+capabilities:
+  - id: CAP-WEB-IDENTITY-AND-SCOPE
+    status: unverified
+  - id: CAP-WEB-TENANT-ONBOARDING
+    status: unverified
+  - id: CAP-WEB-SETUP-READINESS
+    status: unverified
+  - id: CAP-WEB-WORKSPACE-DASHBOARD
+    status: unverified
+  - id: CAP-WEB-CATALOG-AND-MENU-AUTHORING
+    status: unverified
+  - id: CAP-WEB-ORDER-PAYMENT-OPERATIONS
+    status: unverified
+  - id: CAP-WEB-PRODUCTION-INCIDENT-RESOLUTION
+    status: unverified
+  - id: CAP-WEB-KIOSK-READINESS
+    status: unverified
+  - id: CAP-WEB-INVENTORY-OPERATIONS
+    status: unverified
+  - id: CAP-WEB-TECHNICAL-DIAGNOSTICS
+    status: unverified
+  - id: CAP-WEB-ALERT-OPERATIONS
+    status: unverified
+  - id: CAP-WEB-MAINTENANCE-OPERATIONS
+    status: unverified
+  - id: CAP-WEB-ADVANCED-ROBOT-AUTHORING
+    status: unverified
+  - id: CAP-WEB-GUIDED-ROBOT-AUTHORING
+    status: unverified
+  - id: CAP-WEB-RELEASE-AND-DEPLOYMENT
+    status: unverified
+  - id: CAP-WEB-PACKAGE-INSTALLATION
+    status: unverified
+  - id: CAP-WEB-PACKAGE-UPGRADE
+    status: unverified
+  - id: CAP-WEB-FAILURE-ROUTING
+    status: unverified

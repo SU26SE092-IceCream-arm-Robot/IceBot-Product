@@ -1,0 +1,28 @@
+target:
+  id: IceBot-Mobile
+  kind: frontend
+  repository_path: ../../../../IceBot-Mobile
+  technology: Flutter, Dart
+  audience: Staff, Manager, Technician
+  operating_boundary: staff-assisted work at an assigned store or kiosk; not a customer ordering client and not a replacement for WebApp technical authoring
+  allowed_backend_surfaces:
+    - identity and current-account APIs
+    - scoped management REST commands and read models explicitly assigned to Mobile
+  forbidden_backend_surfaces:
+    - anonymous customer kiosk ordering APIs except an explicitly designed staff-assisted workflow
+    - IoT ingest, provider webhooks, and direct robot command transport
+  audit_status: unverified
+  future_contracts:
+    - Cash collection or payment confirmation requires a defined payment-settlement workflow, authorization rule, evidence model, and backend operation before Mobile may implement it.
+    - Additional staff conveniences must be assigned to a FLOW-* and CAP-* before implementation.
+
+capabilities:
+  - id: CAP-MOBILE-STAFF-IDENTITY-AND-SCOPE
+    flow: FLOW-BACK-OFFICE-SETUP
+    actor: Staff, Manager, Technician
+    scope: effective assigned organization, store, and kiosk
+    entry: authenticated mobile session and permitted work-scope selection
+    backend_operations: [authenticate, read current account, resolve effective assigned scope]
+    operation_ids: [OP-REST-POST-API-V-BY-VERSION-AUTHENTICATION-LOGIN, OP-REST-POST-API-V-BY-VERSION-AUTHENTICATION-REFRESH, OP-REST-GET-API-V-BY-VERSION-ME, OP-REST-GET-API-V-BY-VERSION-ME-ACCESS]
+    required_states: [unauthenticated, session expired, no assigned store or kiosk, permission denied, scope unavailable]
+    evidence_targets: [lib, test]

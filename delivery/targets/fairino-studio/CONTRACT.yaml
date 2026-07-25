@@ -1,0 +1,11 @@
+target:
+  id: Fairino-Studio
+  kind: authoring-tool
+  repository_path: ../../../../Fairino-Studio
+  audience: Robot authoring desktop contributor
+  responsibilities:
+    - export deterministic Lua artifacts and IceBot metadata sidecar/bundle
+    - preserve explicit artifact semantics and ordered execution intent
+    - remain local-authoring only; Cloud import/publish is a separate boundary
+  required_sources: [../../playbooks/ROLE_IMPLEMENTATION_CONTRACT.md, ../../../../IceBot-Backend/docs/flows/ROBOT_LUA_AUTHORING_AND_IMPORT_FLOW.md, ../../../../IceBot-Backend/docs/flows/ROBOT_LUA_ARTIFACT_FLOW.md]
+  evidence_targets: [export bundle generator, sidecar schema and validation, deterministic export tests]

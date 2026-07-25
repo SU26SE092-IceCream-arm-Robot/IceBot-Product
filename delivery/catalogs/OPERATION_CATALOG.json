@@ -1,0 +1,2133 @@
+{
+  "catalog_version": 1,
+  "generated_from": "IceBot-Backend ASP.NET controller attributes",
+  "operations": [
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-PRODUCTS",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/products",
+      "controller": "ManagementProductsController",
+      "action": "ListProducts",
+      "authorization_policies": [
+        "products.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-PRODUCTS-BY-PRODUCTID",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/products/{productId:guid}",
+      "controller": "ManagementProductsController",
+      "action": "GetProduct",
+      "authorization_policies": [
+        "products.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-PRODUCTS",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/products",
+      "controller": "ManagementProductsController",
+      "action": "CreateProduct",
+      "authorization_policies": [
+        "products.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-PRODUCTS-FROM-TEMPLATE",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/products/from-template",
+      "controller": "ManagementProductsController",
+      "action": "CloneTemplate",
+      "authorization_policies": [
+        "products.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PUT-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-PRODUCTS-BY-PRODUCTID",
+      "transport": "REST",
+      "method": "PUT",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/products/{productId:guid}",
+      "controller": "ManagementProductsController",
+      "action": "UpdateProduct",
+      "authorization_policies": [
+        "products.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-PRODUCTS-BY-PRODUCTID-AVAILABILITY",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/products/{productId:guid}/availability",
+      "controller": "ManagementProductsController",
+      "action": "SetProductAvailability",
+      "authorization_policies": [
+        "products.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-DELETE-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-PRODUCTS-BY-PRODUCTID",
+      "transport": "REST",
+      "method": "DELETE",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/products/{productId:guid}",
+      "controller": "ManagementProductsController",
+      "action": "DeleteProduct",
+      "authorization_policies": [
+        "products.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-PRODUCTS-BY-PRODUCTID-VARIANTS",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/products/{productId:guid}/variants",
+      "controller": "ManagementProductsController",
+      "action": "AddVariant",
+      "authorization_policies": [
+        "products.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PUT-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-PRODUCTS-BY-PRODUCTID-VARIANTS-BY-VARIANTID",
+      "transport": "REST",
+      "method": "PUT",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/products/{productId:guid}/variants/{variantId:guid}",
+      "controller": "ManagementProductsController",
+      "action": "UpdateVariant",
+      "authorization_policies": [
+        "products.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-PRODUCTS-BY-PRODUCTID-VARIANTS-BY-VARIANTID-AVAILABILITY",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/products/{productId:guid}/variants/{variantId:guid}/availability",
+      "controller": "ManagementProductsController",
+      "action": "SetVariantAvailability",
+      "authorization_policies": [
+        "products.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-DELETE-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-PRODUCTS-BY-PRODUCTID-VARIANTS-BY-VARIANTID",
+      "transport": "REST",
+      "method": "DELETE",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/products/{productId:guid}/variants/{variantId:guid}",
+      "controller": "ManagementProductsController",
+      "action": "DeleteVariant",
+      "authorization_policies": [
+        "products.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-PRODUCT-TEMPLATES",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/product-templates",
+      "controller": "ManagementProductTemplatesController",
+      "action": "List",
+      "authorization_policies": [
+        "product-templates.read"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-PRODUCT-TEMPLATES-BY-PRODUCTID",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/product-templates/{productId:guid}",
+      "controller": "ManagementProductTemplatesController",
+      "action": "Get",
+      "authorization_policies": [
+        "product-templates.read"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-PRODUCT-TEMPLATES",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/product-templates",
+      "controller": "ManagementProductTemplatesController",
+      "action": "Create",
+      "authorization_policies": [
+        "product-templates.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PUT-API-V-BY-VERSION-MANAGEMENT-PRODUCT-TEMPLATES-BY-PRODUCTID",
+      "transport": "REST",
+      "method": "PUT",
+      "route": "/api/v{version:apiVersion}/management/product-templates/{productId:guid}",
+      "controller": "ManagementProductTemplatesController",
+      "action": "Update",
+      "authorization_policies": [
+        "product-templates.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-PRODUCT-TEMPLATES-BY-PRODUCTID-AVAILABILITY",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/product-templates/{productId:guid}/availability",
+      "controller": "ManagementProductTemplatesController",
+      "action": "SetAvailability",
+      "authorization_policies": [
+        "product-templates.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-DELETE-API-V-BY-VERSION-MANAGEMENT-PRODUCT-TEMPLATES-BY-PRODUCTID",
+      "transport": "REST",
+      "method": "DELETE",
+      "route": "/api/v{version:apiVersion}/management/product-templates/{productId:guid}",
+      "controller": "ManagementProductTemplatesController",
+      "action": "Delete",
+      "authorization_policies": [
+        "product-templates.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-PRODUCT-TEMPLATES-BY-PRODUCTID-VARIANTS",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/product-templates/{productId:guid}/variants",
+      "controller": "ManagementProductTemplatesController",
+      "action": "AddVariant",
+      "authorization_policies": [
+        "product-templates.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PUT-API-V-BY-VERSION-MANAGEMENT-PRODUCT-TEMPLATES-BY-PRODUCTID-VARIANTS-BY-VARIANTID",
+      "transport": "REST",
+      "method": "PUT",
+      "route": "/api/v{version:apiVersion}/management/product-templates/{productId:guid}/variants/{variantId:guid}",
+      "controller": "ManagementProductTemplatesController",
+      "action": "UpdateVariant",
+      "authorization_policies": [
+        "product-templates.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-PRODUCT-TEMPLATES-BY-PRODUCTID-VARIANTS-BY-VARIANTID-AVAILABILITY",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/product-templates/{productId:guid}/variants/{variantId:guid}/availability",
+      "controller": "ManagementProductTemplatesController",
+      "action": "SetVariantAvailability",
+      "authorization_policies": [
+        "product-templates.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-DELETE-API-V-BY-VERSION-MANAGEMENT-PRODUCT-TEMPLATES-BY-PRODUCTID-VARIANTS-BY-VARIANTID",
+      "transport": "REST",
+      "method": "DELETE",
+      "route": "/api/v{version:apiVersion}/management/product-templates/{productId:guid}/variants/{variantId:guid}",
+      "controller": "ManagementProductTemplatesController",
+      "action": "DeleteVariant",
+      "authorization_policies": [
+        "product-templates.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-DEVICES",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/devices",
+      "controller": "ManagementDevicesController",
+      "action": "ListDevices",
+      "authorization_policies": [
+        "devices.view"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-KIOSKS-BY-KIOSKID-DEVICES-BY-DEVICEID",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/kiosks/{kioskId:guid}/devices/{deviceId:guid}",
+      "controller": "ManagementDevicesController",
+      "action": "GetDevice",
+      "authorization_policies": [
+        "devices.view"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-KIOSKS-BY-KIOSKID-DEVICES",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/kiosks/{kioskId:guid}/devices",
+      "controller": "ManagementDevicesController",
+      "action": "CreateDevice",
+      "authorization_policies": [
+        "devices.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PUT-API-V-BY-VERSION-MANAGEMENT-KIOSKS-BY-KIOSKID-DEVICES-BY-DEVICEID",
+      "transport": "REST",
+      "method": "PUT",
+      "route": "/api/v{version:apiVersion}/management/kiosks/{kioskId:guid}/devices/{deviceId:guid}",
+      "controller": "ManagementDevicesController",
+      "action": "UpdateDevice",
+      "authorization_policies": [
+        "devices.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-KIOSKS-BY-KIOSKID-DEVICES-BY-DEVICEID-STATUS",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/kiosks/{kioskId:guid}/devices/{deviceId:guid}/status",
+      "controller": "ManagementDevicesController",
+      "action": "SetDeviceStatus",
+      "authorization_policies": [
+        "devices.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-DELETE-API-V-BY-VERSION-MANAGEMENT-KIOSKS-BY-KIOSKID-DEVICES-BY-DEVICEID",
+      "transport": "REST",
+      "method": "DELETE",
+      "route": "/api/v{version:apiVersion}/management/kiosks/{kioskId:guid}/devices/{deviceId:guid}",
+      "controller": "ManagementDevicesController",
+      "action": "RetireDevice",
+      "authorization_policies": [
+        "devices.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-KIOSKS-BY-KIOSKID-DEVICES-BY-DEVICEID-REPLACE",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/kiosks/{kioskId:guid}/devices/{deviceId:guid}/replace",
+      "controller": "ManagementDevicesController",
+      "action": "ReplaceDevice",
+      "authorization_policies": [
+        "devices.manage",
+        "inventory.configure"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-EXECUTION-ENDPOINTS",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/execution-endpoints",
+      "controller": "ManagementExecutionEndpointsController",
+      "action": "List",
+      "authorization_policies": [
+        "devices.view"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-KIOSKS-BY-KIOSKID-EXECUTION-ENDPOINTS-BY-ENDPOINTID",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/kiosks/{kioskId:guid}/execution-endpoints/{endpointId:guid}",
+      "controller": "ManagementExecutionEndpointsController",
+      "action": "Get",
+      "authorization_policies": [
+        "devices.view"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-KIOSKS-BY-KIOSKID-EXECUTION-ENDPOINTS",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/kiosks/{kioskId:guid}/execution-endpoints",
+      "controller": "ManagementExecutionEndpointsController",
+      "action": "Create",
+      "authorization_policies": [
+        "devices.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PUT-API-V-BY-VERSION-MANAGEMENT-KIOSKS-BY-KIOSKID-EXECUTION-ENDPOINTS-BY-ENDPOINTID-SUPPORTED-ROBOT-TARGETS",
+      "transport": "REST",
+      "method": "PUT",
+      "route": "/api/v{version:apiVersion}/management/kiosks/{kioskId:guid}/execution-endpoints/{endpointId:guid}/supported-robot-targets",
+      "controller": "ManagementExecutionEndpointsController",
+      "action": "ReplaceSupportedRobotTargets",
+      "authorization_policies": [
+        "devices.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-KIOSKS-BY-KIOSKID-EXECUTION-ENDPOINTS-BY-ENDPOINTID-PROVISION",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/kiosks/{kioskId:guid}/execution-endpoints/{endpointId:guid}/provision",
+      "controller": "ManagementExecutionEndpointsController",
+      "action": "Provision",
+      "authorization_policies": [
+        "devices.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-KIOSKS-BY-KIOSKID-EXECUTION-ENDPOINTS-BY-ENDPOINTID-DISABLE",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/kiosks/{kioskId:guid}/execution-endpoints/{endpointId:guid}/disable",
+      "controller": "ManagementExecutionEndpointsController",
+      "action": "Disable",
+      "authorization_policies": [
+        "devices.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-KIOSKS-BY-KIOSKID-EXECUTION-ENDPOINTS-BY-ENDPOINTID-REACTIVATE",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/kiosks/{kioskId:guid}/execution-endpoints/{endpointId:guid}/reactivate",
+      "controller": "ManagementExecutionEndpointsController",
+      "action": "Reactivate",
+      "authorization_policies": [
+        "devices.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-KIOSKS-BY-KIOSKID-EXECUTION-ENDPOINTS-BY-ENDPOINTID-RETIRE",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/kiosks/{kioskId:guid}/execution-endpoints/{endpointId:guid}/retire",
+      "controller": "ManagementExecutionEndpointsController",
+      "action": "Retire",
+      "authorization_policies": [
+        "devices.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-KIOSKS-BY-KIOSKID-EXECUTION-ENDPOINTS-BY-ENDPOINTID-CREDENTIAL",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/kiosks/{kioskId:guid}/execution-endpoints/{endpointId:guid}/credential",
+      "controller": "ManagementExecutionEndpointsController",
+      "action": "RotateCredential",
+      "authorization_policies": [
+        "devices.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-KIOSKS-BY-KIOSKID-EXECUTION-ENDPOINTS-BY-ENDPOINTID-MQTT-CREDENTIAL",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/kiosks/{kioskId:guid}/execution-endpoints/{endpointId:guid}/mqtt-credential",
+      "controller": "ManagementExecutionEndpointsController",
+      "action": "ProvisionMqttCredential",
+      "authorization_policies": [
+        "devices.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-KIOSKS-BY-KIOSKID-EXECUTION-ENDPOINTS-BY-ENDPOINTID-MQTT-CREDENTIAL",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/kiosks/{kioskId:guid}/execution-endpoints/{endpointId:guid}/mqtt-credential",
+      "controller": "ManagementExecutionEndpointsController",
+      "action": "RotateMqttCredential",
+      "authorization_policies": [
+        "devices.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-DELETE-API-V-BY-VERSION-MANAGEMENT-KIOSKS-BY-KIOSKID-EXECUTION-ENDPOINTS-BY-ENDPOINTID-MQTT-CREDENTIAL",
+      "transport": "REST",
+      "method": "DELETE",
+      "route": "/api/v{version:apiVersion}/management/kiosks/{kioskId:guid}/execution-endpoints/{endpointId:guid}/mqtt-credential",
+      "controller": "ManagementExecutionEndpointsController",
+      "action": "RevokeMqttCredential",
+      "authorization_policies": [
+        "devices.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-KIOSKS-BY-KIOSKID-HEARTBEATS",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/kiosks/{kioskId:guid}/heartbeats",
+      "controller": "ManagementKioskTelemetryController",
+      "action": "GetHeartbeats",
+      "authorization_policies": [
+        "operations.view"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-KIOSKS-BY-KIOSKID-DEVICE-EVENTS",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/kiosks/{kioskId:guid}/device-events",
+      "controller": "ManagementKioskTelemetryController",
+      "action": "GetEvents",
+      "authorization_policies": [
+        "operations.view"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-AUTHENTICATION-LOGIN",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/authentication/login",
+      "controller": "AuthenticationController",
+      "action": "Login",
+      "authorization_policies": []
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-AUTHENTICATION-GOOGLE",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/authentication/google",
+      "controller": "AuthenticationController",
+      "action": "GoogleLogin",
+      "authorization_policies": []
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-AUTHENTICATION-REFRESH",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/authentication/refresh",
+      "controller": "AuthenticationController",
+      "action": "Refresh",
+      "authorization_policies": []
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-AUTHENTICATION-REVOKE",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/authentication/revoke",
+      "controller": "AuthenticationController",
+      "action": "Revoke",
+      "authorization_policies": []
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-AUTHENTICATION-REVOKE-ALL",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/authentication/revoke-all",
+      "controller": "AuthenticationController",
+      "action": "RevokeAll",
+      "authorization_policies": []
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-AUTHENTICATION-FORGOT-PASSWORD",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/authentication/forgot-password",
+      "controller": "AuthenticationController",
+      "action": "ForgotPassword",
+      "authorization_policies": []
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-AUTHENTICATION-RESET-PASSWORD",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/authentication/reset-password",
+      "controller": "AuthenticationController",
+      "action": "ResetPassword",
+      "authorization_policies": []
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-AUTHENTICATION-ACCEPT-INVITATION",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/authentication/accept-invitation",
+      "controller": "AuthenticationController",
+      "action": "AcceptInvitation",
+      "authorization_policies": []
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-ME",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/me",
+      "controller": "CurrentAccountController",
+      "action": "GetCurrentAccount",
+      "authorization_policies": []
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-ME-ACCESS",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/me/access",
+      "controller": "CurrentAccountController",
+      "action": "GetCurrentAccess",
+      "authorization_policies": []
+    },
+    {
+      "id": "OP-REST-PUT-API-V-BY-VERSION-ME-PROFILE",
+      "transport": "REST",
+      "method": "PUT",
+      "route": "/api/v{version:apiVersion}/me/profile",
+      "controller": "CurrentAccountController",
+      "action": "UpdateProfile",
+      "authorization_policies": []
+    },
+    {
+      "id": "OP-REST-PUT-API-V-BY-VERSION-ME-PASSWORD",
+      "transport": "REST",
+      "method": "PUT",
+      "route": "/api/v{version:apiVersion}/me/password",
+      "controller": "CurrentAccountController",
+      "action": "ChangePassword",
+      "authorization_policies": []
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-ME-NOTIFICATION-DEVICES",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/me/notification-devices",
+      "controller": "CurrentAccountController",
+      "action": "ListNotificationDevices",
+      "authorization_policies": []
+    },
+    {
+      "id": "OP-REST-PUT-API-V-BY-VERSION-ME-NOTIFICATION-DEVICES-BY-INSTALLATIONID",
+      "transport": "REST",
+      "method": "PUT",
+      "route": "/api/v{version:apiVersion}/me/notification-devices/{installationId:guid}",
+      "controller": "CurrentAccountController",
+      "action": "RegisterNotificationDevice",
+      "authorization_policies": []
+    },
+    {
+      "id": "OP-REST-DELETE-API-V-BY-VERSION-ME-NOTIFICATION-DEVICES-BY-INSTALLATIONID",
+      "transport": "REST",
+      "method": "DELETE",
+      "route": "/api/v{version:apiVersion}/me/notification-devices/{installationId:guid}",
+      "controller": "CurrentAccountController",
+      "action": "UnregisterNotificationDevice",
+      "authorization_policies": []
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-ACCOUNTS",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/accounts",
+      "controller": "ManagementAccountsController",
+      "action": "ListInternalAccounts",
+      "authorization_policies": [
+        "accounts.read"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-ACCOUNTS-BY-ACCOUNTID",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/accounts/{accountId:guid}",
+      "controller": "ManagementAccountsController",
+      "action": "GetInternalAccount",
+      "authorization_policies": [
+        "accounts.read"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ACCOUNTS",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/accounts",
+      "controller": "ManagementAccountsController",
+      "action": "CreateInternalAccount",
+      "authorization_policies": [
+        "accounts.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PUT-API-V-BY-VERSION-MANAGEMENT-ACCOUNTS-BY-ACCOUNTID",
+      "transport": "REST",
+      "method": "PUT",
+      "route": "/api/v{version:apiVersion}/management/accounts/{accountId:guid}",
+      "controller": "ManagementAccountsController",
+      "action": "UpdateInternalAccount",
+      "authorization_policies": [
+        "accounts.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-ACCOUNTS-BY-ACCOUNTID-DISABLE",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/accounts/{accountId:guid}/disable",
+      "controller": "ManagementAccountsController",
+      "action": "DisableInternalAccount",
+      "authorization_policies": [
+        "accounts.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PUT-API-V-BY-VERSION-MANAGEMENT-ACCOUNTS-BY-ACCOUNTID-PASSWORD",
+      "transport": "REST",
+      "method": "PUT",
+      "route": "/api/v{version:apiVersion}/management/accounts/{accountId:guid}/password",
+      "controller": "ManagementAccountsController",
+      "action": "SetPassword",
+      "authorization_policies": [
+        "accounts.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ACCOUNTS-BY-ACCOUNTID-ROLES",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/accounts/{accountId:guid}/roles",
+      "controller": "ManagementAccountsController",
+      "action": "AssignRole",
+      "authorization_policies": [
+        "accounts.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PUT-API-V-BY-VERSION-MANAGEMENT-ACCOUNTS-BY-ACCOUNTID-ROLES",
+      "transport": "REST",
+      "method": "PUT",
+      "route": "/api/v{version:apiVersion}/management/accounts/{accountId:guid}/roles",
+      "controller": "ManagementAccountsController",
+      "action": "UpdateRoles",
+      "authorization_policies": [
+        "accounts.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-ACCOUNTS-BY-ACCOUNTID-EFFECTIVE-ACCESS",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/accounts/{accountId:guid}/effective-access",
+      "controller": "ManagementAccountsController",
+      "action": "GetEffectiveAccess",
+      "authorization_policies": [
+        "accounts.read"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ACCOUNTS-BY-ACCOUNTID-INVITATION",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/accounts/{accountId:guid}/invitation",
+      "controller": "ManagementAccountsController",
+      "action": "CreateInvitation",
+      "authorization_policies": [
+        "accounts.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-PERMISSION-MATRIX",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/permission-matrix",
+      "controller": "ManagementAuthorizationController",
+      "action": "GetPermissionMatrix",
+      "authorization_policies": [
+        "roles.view"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-ROLES",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/roles",
+      "controller": "ManagementRolesController",
+      "action": "ListRoles",
+      "authorization_policies": [
+        "roles.view"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-INVENTORY-DISPENSER-STATES",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/inventory/dispenser-states",
+      "controller": "ManagementInventoryController",
+      "action": "GetDispenserStates",
+      "authorization_policies": [
+        "inventory.view"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-INVENTORY-STOCK-MOVEMENTS",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/inventory/stock-movements",
+      "controller": "ManagementInventoryController",
+      "action": "GetStockMovements",
+      "authorization_policies": [
+        "inventory.view"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-KIOSKS-BY-KIOSKID-INVENTORY-DISPENSER-STATES-BY-ID-REFILL",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/kiosks/{kioskId:guid}/inventory/dispenser-states/{id:guid}/refill",
+      "controller": "ManagementInventoryController",
+      "action": "RefillDispenser",
+      "authorization_policies": [
+        "inventory.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-KIOSKS-BY-KIOSKID-INVENTORY-DISPENSER-STATES-BY-ID-ADJUST-ESTIMATE",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/kiosks/{kioskId:guid}/inventory/dispenser-states/{id:guid}/adjust-estimate",
+      "controller": "ManagementInventoryController",
+      "action": "AdjustDispenserEstimate",
+      "authorization_policies": [
+        "inventory.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-IOT-EXECUTION-ENDPOINTS-BY-ENDPOINTID-TELEMETRY-EVENTS",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/iot/execution-endpoints/{endpointId:guid}/telemetry-events",
+      "controller": "BatchEventsController",
+      "action": "Ingest",
+      "authorization_policies": []
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-IOT-EXECUTION-ENDPOINTS-BY-ENDPOINTID-DEVICE-EVENTS",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/iot/execution-endpoints/{endpointId:guid}/device-events",
+      "controller": "DeviceEventsController",
+      "action": "IngestDeviceEvent",
+      "authorization_policies": []
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-IOT-EXECUTION-ENDPOINTS-BY-ENDPOINTID-COMMANDS-PULL",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/iot/execution-endpoints/{endpointId:guid}/commands/pull",
+      "controller": "ExecutionCommandsController",
+      "action": "PullCommands",
+      "authorization_policies": []
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-IOT-EXECUTION-ENDPOINTS-BY-ENDPOINTID-COMMANDS-BY-COMMANDID-ACK",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/iot/execution-endpoints/{endpointId:guid}/commands/{commandId:guid}/ack",
+      "controller": "ExecutionCommandsController",
+      "action": "AcknowledgeCommand",
+      "authorization_policies": []
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-IOT-EXECUTION-ENDPOINTS-BY-ENDPOINTID-READINESS",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/iot/execution-endpoints/{endpointId:guid}/readiness",
+      "controller": "ExecutionReadinessController",
+      "action": "Ingest",
+      "authorization_policies": []
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-IOT-EXECUTION-ENDPOINTS-BY-ENDPOINTID-COMMANDS-BY-COMMANDID-REPORTS",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/iot/execution-endpoints/{endpointId:guid}/commands/{commandId:guid}/reports",
+      "controller": "ExecutionReportsController",
+      "action": "IngestExecutionReport",
+      "authorization_policies": []
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-IOT-EXECUTION-ENDPOINTS-BY-ENDPOINTID-HEARTBEAT",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/iot/execution-endpoints/{endpointId:guid}/heartbeat",
+      "controller": "KioskHeartbeatsController",
+      "action": "IngestHeartbeat",
+      "authorization_policies": []
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-IOT-EXECUTION-ENDPOINTS-BY-ENDPOINTID-PRODUCTION-SYNC-CHECKPOINT",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/iot/execution-endpoints/{endpointId:guid}/production-sync/checkpoint",
+      "controller": "ProductionSyncController",
+      "action": "GetCheckpoint",
+      "authorization_policies": []
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-IOT-EXECUTION-ENDPOINTS-BY-ENDPOINTID-PRODUCTION-SYNC-STATE-SUMMARIES",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/iot/execution-endpoints/{endpointId:guid}/production-sync/state-summaries",
+      "controller": "ProductionSyncController",
+      "action": "IngestStateSummaries",
+      "authorization_policies": []
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-IOT-EXECUTION-ENDPOINTS-BY-ENDPOINTID-PRODUCTION-SYNC-EVENTS",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/iot/execution-endpoints/{endpointId:guid}/production-sync/events",
+      "controller": "ProductionSyncController",
+      "action": "IngestEvents",
+      "authorization_policies": []
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-ALERTS",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/alerts",
+      "controller": "ManagementAlertsController",
+      "action": "List",
+      "authorization_policies": [
+        "alerts.view"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-ALERTS-BY-ALERTID",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/alerts/{alertId:guid}",
+      "controller": "ManagementAlertsController",
+      "action": "Get",
+      "authorization_policies": [
+        "alerts.view"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-ALERTS-BY-ALERTID-ACKNOWLEDGE",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/alerts/{alertId:guid}/acknowledge",
+      "controller": "ManagementAlertsController",
+      "action": "Acknowledge",
+      "authorization_policies": [
+        "alerts.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-ALERTS-BY-ALERTID-RESOLVE",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/alerts/{alertId:guid}/resolve",
+      "controller": "ManagementAlertsController",
+      "action": "Resolve",
+      "authorization_policies": [
+        "alerts.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-KIOSKS-BY-KIOSKID-OPERATION-LOGS",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/kiosks/{kioskId:guid}/operation-logs",
+      "controller": "ManagementKioskOperationLogsController",
+      "action": "List",
+      "authorization_policies": [
+        "operations.view"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-KIOSKS-BY-KIOSKID-OPERATION-LOGS-BY-OPERATIONLOGID",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/kiosks/{kioskId:guid}/operation-logs/{operationLogId:guid}",
+      "controller": "ManagementKioskOperationLogsController",
+      "action": "Get",
+      "authorization_policies": [
+        "operations.view"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-KIOSKS-BY-KIOSKID-OPERATION-LOGS-BY-OPERATIONLOGID-DIAGNOSTICS",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/kiosks/{kioskId:guid}/operation-logs/{operationLogId:guid}/diagnostics",
+      "controller": "ManagementKioskOperationLogsController",
+      "action": "GetDiagnostics",
+      "authorization_policies": [
+        "operations.diagnostics"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-MAINTENANCE-TICKETS",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/maintenance-tickets",
+      "controller": "ManagementMaintenanceTicketsController",
+      "action": "ListMaintenanceTickets",
+      "authorization_policies": [
+        "maintenance.view"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-MAINTENANCE-TICKETS-BY-ID",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/maintenance-tickets/{id:guid}",
+      "controller": "ManagementMaintenanceTicketsController",
+      "action": "GetMaintenanceTicket",
+      "authorization_policies": [
+        "maintenance.view"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-MAINTENANCE-TICKETS",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/maintenance-tickets",
+      "controller": "ManagementMaintenanceTicketsController",
+      "action": "CreateMaintenanceTicket",
+      "authorization_policies": [
+        "maintenance.create"
+      ]
+    },
+    {
+      "id": "OP-REST-PUT-API-V-BY-VERSION-MANAGEMENT-MAINTENANCE-TICKETS-BY-ID",
+      "transport": "REST",
+      "method": "PUT",
+      "route": "/api/v{version:apiVersion}/management/maintenance-tickets/{id:guid}",
+      "controller": "ManagementMaintenanceTicketsController",
+      "action": "UpdateMaintenanceTicket",
+      "authorization_policies": [
+        "maintenance.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-MAINTENANCE-TICKETS-BY-ID-ASSIGN",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/maintenance-tickets/{id:guid}/assign",
+      "controller": "ManagementMaintenanceTicketsController",
+      "action": "AssignMaintenanceTicket",
+      "authorization_policies": [
+        "maintenance.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-MAINTENANCE-TICKETS-BY-ID-START",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/maintenance-tickets/{id:guid}/start",
+      "controller": "ManagementMaintenanceTicketsController",
+      "action": "StartMaintenanceTicket",
+      "authorization_policies": [
+        "maintenance.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-MAINTENANCE-TICKETS-BY-ID-RESOLVE",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/maintenance-tickets/{id:guid}/resolve",
+      "controller": "ManagementMaintenanceTicketsController",
+      "action": "ResolveMaintenanceTicket",
+      "authorization_policies": [
+        "maintenance.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-MAINTENANCE-TICKETS-BY-ID-CLOSE",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/maintenance-tickets/{id:guid}/close",
+      "controller": "ManagementMaintenanceTicketsController",
+      "action": "CloseMaintenanceTicket",
+      "authorization_policies": [
+        "maintenance.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-MAINTENANCE-TICKETS-BY-ID-CANCEL",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/maintenance-tickets/{id:guid}/cancel",
+      "controller": "ManagementMaintenanceTicketsController",
+      "action": "CancelMaintenanceTicket",
+      "authorization_policies": [
+        "maintenance.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-SYNC-DEAD-LETTERS",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/sync-dead-letters",
+      "controller": "ManagementSyncDeadLettersController",
+      "action": "List",
+      "authorization_policies": [
+        "sync-dead-letters.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-SYNC-DEAD-LETTERS-BY-ID",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/sync-dead-letters/{id:guid}",
+      "controller": "ManagementSyncDeadLettersController",
+      "action": "Get",
+      "authorization_policies": [
+        "sync-dead-letters.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-SYNC-DEAD-LETTERS-BY-ID-RETRY",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/sync-dead-letters/{id:guid}/retry",
+      "controller": "ManagementSyncDeadLettersController",
+      "action": "Retry",
+      "authorization_policies": [
+        "sync-dead-letters.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-SYNC-DEAD-LETTERS-BY-ID-RESOLVE",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/sync-dead-letters/{id:guid}/resolve",
+      "controller": "ManagementSyncDeadLettersController",
+      "action": "Resolve",
+      "authorization_policies": [
+        "sync-dead-letters.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-SYNC-DEAD-LETTERS-BY-ID-IGNORE",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/sync-dead-letters/{id:guid}/ignore",
+      "controller": "ManagementSyncDeadLettersController",
+      "action": "Ignore",
+      "authorization_policies": [
+        "sync-dead-letters.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-ORDERS-BY-ORDERID-EXECUTION-ATTEMPTS-BY-SOURCECOMMANDID-DIAGNOSTICS",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/orders/{orderId:guid}/execution-attempts/{sourceCommandId:guid}/diagnostics",
+      "controller": "ManagementExecutionAttemptsController",
+      "action": "GetExecutionAttempt",
+      "authorization_policies": [
+        "operations.diagnostics"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORDERS-BY-ORDERID-ITEMS-BY-ORDERITEMID-MANUAL-FULFILLMENT-EVENTS",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/orders/{orderId:guid}/items/{orderItemId:guid}/manual-fulfillment-events",
+      "controller": "ManagementOrdersController",
+      "action": "RecordManualItemFulfillmentEvent",
+      "authorization_policies": [
+        "orders.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORDERS-BY-ORDERID-ITEMS-BY-ORDERITEMID-FULFILL",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/orders/{orderId:guid}/items/{orderItemId:guid}/fulfill",
+      "controller": "ManagementOrdersController",
+      "action": "FulfillPackagedItem",
+      "authorization_policies": [
+        "orders.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORDERS-BY-ORDERID-ITEMS-BY-ORDERITEMID-FAIL",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/orders/{orderId:guid}/items/{orderItemId:guid}/fail",
+      "controller": "ManagementOrdersController",
+      "action": "FailPackagedItem",
+      "authorization_policies": [
+        "orders.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORDERS-BY-ORDERID-EXECUTION-ATTEMPTS",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/orders/{orderId:guid}/execution-attempts",
+      "controller": "ManagementOrdersController",
+      "action": "RedispatchOrderExecution",
+      "authorization_policies": [
+        "orders.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORDERS-BY-ORDERID-ITEMS-BY-ORDERITEMID-PRODUCTION-REMAKES",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/orders/{orderId:guid}/items/{orderItemId:guid}/production-remakes",
+      "controller": "ManagementOrdersController",
+      "action": "RequestProductionRemake",
+      "authorization_policies": [
+        "orders.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-ORDERS-BY-ORDERID-CANCEL",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/orders/{orderId:guid}/cancel",
+      "controller": "ManagementOrdersController",
+      "action": "CancelOrder",
+      "authorization_policies": [
+        "orders.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-ORDERS-BY-ORDERID-REFUND-REQUIRED",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/orders/{orderId:guid}/refund-required",
+      "controller": "ManagementOrdersController",
+      "action": "MarkRefundRequired",
+      "authorization_policies": [
+        "orders.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-ORDERS",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/orders",
+      "controller": "OrdersController",
+      "action": "PlaceOrder",
+      "authorization_policies": []
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-ORDERS-BY-ORDERID",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/orders/{orderId:guid}",
+      "controller": "OrdersController",
+      "action": "GetOrderStatus",
+      "authorization_policies": []
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-ORDERS-BY-ORDERID-PAYMENT-SESSIONS",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/orders/{orderId:guid}/payment-sessions",
+      "controller": "OrdersController",
+      "action": "CreatePaymentSession",
+      "authorization_policies": []
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-ORDERS-BY-ORDERID-PAYMENT-STATUS",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/orders/{orderId:guid}/payment-status",
+      "controller": "OrdersController",
+      "action": "GetOrderPaymentStatus",
+      "authorization_policies": []
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-ORDERS-BY-ORDERID-CANCEL",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/orders/{orderId:guid}/cancel",
+      "controller": "OrdersController",
+      "action": "CancelPendingOrder",
+      "authorization_policies": []
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-PAYMENT-METHODS",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/payment-methods",
+      "controller": "ManagementPaymentMethodsController",
+      "action": "GetAll",
+      "authorization_policies": [
+        "payments.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-PAYMENT-METHODS-BY-ID-STATUS",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/payment-methods/{id:long}/status",
+      "controller": "ManagementPaymentMethodsController",
+      "action": "SetStatus",
+      "authorization_policies": [
+        "payments.manage",
+        "payment-methods.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-REFUNDS",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/refunds",
+      "controller": "ManagementRefundsController",
+      "action": "ListRefunds",
+      "authorization_policies": [
+        "refunds.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-REFUNDS-BY-REFUNDID",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/refunds/{refundId:guid}",
+      "controller": "ManagementRefundsController",
+      "action": "GetRefund",
+      "authorization_policies": [
+        "refunds.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORDERS-BY-ORDERID-REFUNDS",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/orders/{orderId:guid}/refunds",
+      "controller": "ManagementRefundsController",
+      "action": "RequestRefund",
+      "authorization_policies": [
+        "refunds.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-REFUNDS-BY-REFUNDID-MARK-PROCESSED",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/refunds/{refundId:guid}/mark-processed",
+      "controller": "ManagementRefundsController",
+      "action": "MarkProcessed",
+      "authorization_policies": [
+        "refunds.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-REFUNDS-BY-REFUNDID-REJECT",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/refunds/{refundId:guid}/reject",
+      "controller": "ManagementRefundsController",
+      "action": "RejectRefund",
+      "authorization_policies": [
+        "refunds.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-REFUNDS-BY-REFUNDID-CANCEL",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/refunds/{refundId:guid}/cancel",
+      "controller": "ManagementRefundsController",
+      "action": "CancelRefund",
+      "authorization_policies": [
+        "refunds.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-PAYMENTS-PAYOS-WEBHOOK",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/payments/payos/webhook",
+      "controller": "PayOsWebhookController",
+      "action": "HandleWebhook",
+      "authorization_policies": []
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-CONFIGURATION-DEPLOYMENTS",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/configuration-deployments",
+      "controller": "ManagementConfigurationDeploymentsController",
+      "action": "List",
+      "authorization_policies": [
+        "deployment.read"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-KIOSKS-BY-KIOSKID-CONFIGURATION-DEPLOYMENTS",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/kiosks/{kioskId:guid}/configuration-deployments",
+      "controller": "ManagementConfigurationDeploymentsController",
+      "action": "ListForKiosk",
+      "authorization_policies": [
+        "deployment.read"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-KIOSKS-BY-KIOSKID-CONFIGURATION-DEPLOYMENTS-BY-DEPLOYMENTID",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/kiosks/{kioskId:guid}/configuration-deployments/{deploymentId:guid}",
+      "controller": "ManagementConfigurationDeploymentsController",
+      "action": "Get",
+      "authorization_policies": [
+        "deployment.read"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-KIOSKS-BY-KIOSKID-CONFIGURATION-DEPLOYMENTS-BY-DEPLOYMENTID-ARTIFACTS",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/kiosks/{kioskId:guid}/configuration-deployments/{deploymentId:guid}/artifacts",
+      "controller": "ManagementConfigurationDeploymentsController",
+      "action": "GetArtifacts",
+      "authorization_policies": [
+        "deployment.read"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-KIOSKS-BY-KIOSKID-CONFIGURATION-DEPLOYMENTS-BY-DEPLOYMENTID-ROLLBACK",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/kiosks/{kioskId:guid}/configuration-deployments/{deploymentId:guid}/rollback",
+      "controller": "ManagementConfigurationDeploymentsController",
+      "action": "Rollback",
+      "authorization_policies": [
+        "release.rollback"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-KIOSKS-BY-KIOSKID-CONFIGURATION-DEPLOYMENTS-FULL-EDGE",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/kiosks/{kioskId:guid}/configuration-deployments/full-edge",
+      "controller": "ManagementConfigurationDeploymentsController",
+      "action": "DeployFullEdge",
+      "authorization_policies": [
+        "release.deploy"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-KIOSKS-BY-KIOSKID-CONFIGURATION-DEPLOYMENTS-PREVIEW",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/kiosks/{kioskId:guid}/configuration-deployments/preview",
+      "controller": "ManagementConfigurationDeploymentsController",
+      "action": "PreviewDeployment",
+      "authorization_policies": [
+        "release.deploy"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-KIOSKS-BY-KIOSKID-CONFIGURATION-DEPLOYMENTS-LOW-COST",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/kiosks/{kioskId:guid}/configuration-deployments/low-cost",
+      "controller": "ManagementConfigurationDeploymentsController",
+      "action": "DeployLowCost",
+      "authorization_policies": [
+        "release.deploy"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-CONFIGURATION-RELEASES",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/configuration-releases",
+      "controller": "ManagementConfigurationReleasesController",
+      "action": "ListConfigurationReleases",
+      "authorization_policies": [
+        "release.read"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-CONFIGURATION-RELEASES-BY-RELEASEID",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/configuration-releases/{releaseId:guid}",
+      "controller": "ManagementConfigurationReleasesController",
+      "action": "GetConfigurationRelease",
+      "authorization_policies": [
+        "release.read"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-CONFIGURATION-RELEASES-AUTHORING-OPTIONS",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/configuration-releases/authoring-options",
+      "controller": "ManagementConfigurationReleasesController",
+      "action": "GetConfigurationReleaseAuthoringOptions",
+      "authorization_policies": [
+        "release.read"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-CONFIGURATION-RELEASES",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/configuration-releases",
+      "controller": "ManagementConfigurationReleasesController",
+      "action": "CreateConfigurationRelease",
+      "authorization_policies": [
+        "release.publish"
+      ]
+    },
+    {
+      "id": "OP-REST-PUT-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-CONFIGURATION-RELEASES-BY-RELEASEID-ROUTES",
+      "transport": "REST",
+      "method": "PUT",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/configuration-releases/{releaseId:guid}/routes",
+      "controller": "ManagementConfigurationReleasesController",
+      "action": "ReplaceConfigurationReleaseRoutes",
+      "authorization_policies": [
+        "release.publish"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-CONFIGURATION-RELEASES-BY-RELEASEID-PUBLISH",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/configuration-releases/{releaseId:guid}/publish",
+      "controller": "ManagementConfigurationReleasesController",
+      "action": "PublishConfigurationRelease",
+      "authorization_policies": [
+        "release.publish"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-CONFIGURATION-RELEASES-BY-RELEASEID-RETIRE",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/configuration-releases/{releaseId:guid}/retire",
+      "controller": "ManagementConfigurationReleasesController",
+      "action": "RetireConfigurationRelease",
+      "authorization_policies": [
+        "release.publish"
+      ]
+    },
+    {
+      "id": "OP-REST-DELETE-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-CONFIGURATION-RELEASES-BY-RELEASEID",
+      "transport": "REST",
+      "method": "DELETE",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/configuration-releases/{releaseId:guid}",
+      "controller": "ManagementConfigurationReleasesController",
+      "action": "DiscardDraftConfigurationRelease",
+      "authorization_policies": [
+        "release.publish"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-ROBOT-ARTIFACTS",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/robot-artifacts",
+      "controller": "ManagementRobotArtifactsController",
+      "action": "ListRobotArtifacts",
+      "authorization_policies": [
+        "artifact.read"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-ROBOT-ARTIFACTS-BY-ARTIFACTID",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/robot-artifacts/{artifactId:guid}",
+      "controller": "ManagementRobotArtifactsController",
+      "action": "GetRobotArtifact",
+      "authorization_policies": [
+        "artifact.read"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-ROBOT-ARTIFACTS-BY-ARTIFACTID-USAGE",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/robot-artifacts/{artifactId:guid}/usage",
+      "controller": "ManagementRobotArtifactsController",
+      "action": "GetUsage",
+      "authorization_policies": [
+        "artifact.read"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-ROBOT-ARTIFACTS-BULK",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/robot-artifacts/bulk",
+      "controller": "ManagementRobotArtifactsController",
+      "action": "BulkUploadRobotArtifacts",
+      "authorization_policies": [
+        "artifact.upload"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-ROBOT-ARTIFACTS-FROM-TEMPLATE",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/robot-artifacts/from-template",
+      "controller": "ManagementRobotArtifactsController",
+      "action": "CloneFromTemplate",
+      "authorization_policies": [
+        "artifact.upload"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-ROBOT-ARTIFACTS-BY-ARTIFACTID-PUBLISH",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/robot-artifacts/{artifactId:guid}/publish",
+      "controller": "ManagementRobotArtifactsController",
+      "action": "PublishRobotArtifact",
+      "authorization_policies": [
+        "artifact.upload"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-ROBOT-ARTIFACTS-PUBLISH-BULK",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/robot-artifacts/publish-bulk",
+      "controller": "ManagementRobotArtifactsController",
+      "action": "BulkPublishRobotArtifacts",
+      "authorization_policies": [
+        "artifact.upload"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-ROBOT-ARTIFACTS-BY-ARTIFACTID-RETIRE",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/robot-artifacts/{artifactId:guid}/retire",
+      "controller": "ManagementRobotArtifactsController",
+      "action": "RetireRobotArtifact",
+      "authorization_policies": [
+        "artifact.upload"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-ROBOT-ARTIFACTS-BY-ARTIFACTID-REVIEW-URL",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/robot-artifacts/{artifactId:guid}/review-url",
+      "controller": "ManagementRobotArtifactsController",
+      "action": "CreateRobotArtifactReviewUrl",
+      "authorization_policies": [
+        "artifact.upload"
+      ]
+    },
+    {
+      "id": "OP-REST-DELETE-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-ROBOT-ARTIFACTS-BY-ARTIFACTID",
+      "transport": "REST",
+      "method": "DELETE",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/robot-artifacts/{artifactId:guid}",
+      "controller": "ManagementRobotArtifactsController",
+      "action": "DiscardDraftRobotArtifact",
+      "authorization_policies": [
+        "artifact.upload"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-ROBOT-ARTIFACT-TEMPLATES",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/robot-artifact-templates",
+      "controller": "ManagementRobotArtifactTemplatesController",
+      "action": "List",
+      "authorization_policies": [
+        "artifact-template.read"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-ROBOT-ARTIFACT-TEMPLATES-BY-TEMPLATEID",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/robot-artifact-templates/{templateId:guid}",
+      "controller": "ManagementRobotArtifactTemplatesController",
+      "action": "Get",
+      "authorization_policies": [
+        "artifact-template.read"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ROBOT-ARTIFACT-TEMPLATES-BULK",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/robot-artifact-templates/bulk",
+      "controller": "ManagementRobotArtifactTemplatesController",
+      "action": "BulkUpload",
+      "authorization_policies": [
+        "artifact-template.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ROBOT-ARTIFACT-TEMPLATES-BY-TEMPLATEID-REVIEW-URL",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/robot-artifact-templates/{templateId:guid}/review-url",
+      "controller": "ManagementRobotArtifactTemplatesController",
+      "action": "Review",
+      "authorization_policies": [
+        "artifact-template.read"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-ROBOT-ARTIFACT-TEMPLATES-BY-TEMPLATEID-PUBLISH",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/robot-artifact-templates/{templateId:guid}/publish",
+      "controller": "ManagementRobotArtifactTemplatesController",
+      "action": "Publish",
+      "authorization_policies": [
+        "artifact-template.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-ROBOT-ARTIFACT-TEMPLATES-BY-TEMPLATEID-RETIRE",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/robot-artifact-templates/{templateId:guid}/retire",
+      "controller": "ManagementRobotArtifactTemplatesController",
+      "action": "Retire",
+      "authorization_policies": [
+        "artifact-template.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-DELETE-API-V-BY-VERSION-MANAGEMENT-ROBOT-ARTIFACT-TEMPLATES-BY-TEMPLATEID",
+      "transport": "REST",
+      "method": "DELETE",
+      "route": "/api/v{version:apiVersion}/management/robot-artifact-templates/{templateId:guid}",
+      "controller": "ManagementRobotArtifactTemplatesController",
+      "action": "Discard",
+      "authorization_policies": [
+        "artifact-template.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-ROBOT-PROGRAMS",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/robot-programs",
+      "controller": "ManagementRobotProgramsController",
+      "action": "ListRobotPrograms",
+      "authorization_policies": [
+        "program.read"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-ROBOT-PROGRAMS-BY-PROGRAMID",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/robot-programs/{programId:guid}",
+      "controller": "ManagementRobotProgramsController",
+      "action": "GetRobotProgram",
+      "authorization_policies": [
+        "program.read"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-ROBOT-PROGRAMS",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/robot-programs",
+      "controller": "ManagementRobotProgramsController",
+      "action": "CreateRobotProgram",
+      "authorization_policies": [
+        "program.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PUT-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-ROBOT-PROGRAMS-BY-PROGRAMID",
+      "transport": "REST",
+      "method": "PUT",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/robot-programs/{programId:guid}",
+      "controller": "ManagementRobotProgramsController",
+      "action": "UpdateRobotProgram",
+      "authorization_policies": [
+        "program.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PUT-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-ROBOT-PROGRAMS-BY-PROGRAMID-ARTIFACTS",
+      "transport": "REST",
+      "method": "PUT",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/robot-programs/{programId:guid}/artifacts",
+      "controller": "ManagementRobotProgramsController",
+      "action": "ReplaceRobotProgramArtifacts",
+      "authorization_policies": [
+        "program.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-ROBOT-PROGRAMS-BY-PROGRAMID-PUBLISH",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/robot-programs/{programId:guid}/publish",
+      "controller": "ManagementRobotProgramsController",
+      "action": "PublishRobotProgram",
+      "authorization_policies": [
+        "program.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-ROBOT-PROGRAMS-BY-PROGRAMID-RETIRE",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/robot-programs/{programId:guid}/retire",
+      "controller": "ManagementRobotProgramsController",
+      "action": "RetireRobotProgram",
+      "authorization_policies": [
+        "program.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-DELETE-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-ROBOT-PROGRAMS-BY-PROGRAMID",
+      "transport": "REST",
+      "method": "DELETE",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/robot-programs/{programId:guid}",
+      "controller": "ManagementRobotProgramsController",
+      "action": "DiscardDraftRobotProgram",
+      "authorization_policies": [
+        "program.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-KIOSKS-BY-KIOSKID-RUNTIME-MENU",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/kiosks/{kioskId:guid}/runtime-menu",
+      "controller": "KioskRuntimeMenusController",
+      "action": "GetRuntimeMenu",
+      "authorization_policies": []
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-MENUS",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/menus",
+      "controller": "ManagementMenusController",
+      "action": "ListMenus",
+      "authorization_policies": [
+        "menus.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-MENUS-BY-MENUID",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/menus/{menuId:guid}",
+      "controller": "ManagementMenusController",
+      "action": "GetMenu",
+      "authorization_policies": [
+        "menus.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-MENUS",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/menus",
+      "controller": "ManagementMenusController",
+      "action": "CreateMenu",
+      "authorization_policies": [
+        "menus.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PUT-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-MENUS-BY-MENUID",
+      "transport": "REST",
+      "method": "PUT",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/menus/{menuId:guid}",
+      "controller": "ManagementMenusController",
+      "action": "UpdateMenu",
+      "authorization_policies": [
+        "menus.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-MENUS-BY-MENUID-STATUS",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/menus/{menuId:guid}/status",
+      "controller": "ManagementMenusController",
+      "action": "SetMenuStatus",
+      "authorization_policies": [
+        "menus.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-DELETE-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-MENUS-BY-MENUID",
+      "transport": "REST",
+      "method": "DELETE",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/menus/{menuId:guid}",
+      "controller": "ManagementMenusController",
+      "action": "DeleteMenu",
+      "authorization_policies": [
+        "menus.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-MENUS-BY-MENUID-ITEMS",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/menus/{menuId:guid}/items",
+      "controller": "ManagementMenusController",
+      "action": "AddMenuItem",
+      "authorization_policies": [
+        "menus.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PUT-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-MENUS-BY-MENUID-ITEMS-BY-MENUITEMID",
+      "transport": "REST",
+      "method": "PUT",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/menus/{menuId:guid}/items/{menuItemId:guid}",
+      "controller": "ManagementMenusController",
+      "action": "UpdateMenuItem",
+      "authorization_policies": [
+        "menus.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-MENUS-BY-MENUID-ITEMS-BY-MENUITEMID-STATUS",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/menus/{menuId:guid}/items/{menuItemId:guid}/status",
+      "controller": "ManagementMenusController",
+      "action": "SetMenuItemStatus",
+      "authorization_policies": [
+        "menus.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-DELETE-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-MENUS-BY-MENUID-ITEMS-BY-MENUITEMID",
+      "transport": "REST",
+      "method": "DELETE",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/menus/{menuId:guid}/items/{menuItemId:guid}",
+      "controller": "ManagementMenusController",
+      "action": "DeleteMenuItem",
+      "authorization_policies": [
+        "menus.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-KIOSKS",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/kiosks",
+      "controller": "ManagementKiosksController",
+      "action": "ListKiosks",
+      "authorization_policies": [
+        "kiosks.view"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-KIOSKS-BY-KIOSKID",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/kiosks/{kioskId:guid}",
+      "controller": "ManagementKiosksController",
+      "action": "GetKiosk",
+      "authorization_policies": [
+        "kiosks.view"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-STORES-BY-STOREID-KIOSKS",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/stores/{storeId:guid}/kiosks",
+      "controller": "ManagementKiosksController",
+      "action": "CreateKiosk",
+      "authorization_policies": [
+        "kiosks.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PUT-API-V-BY-VERSION-MANAGEMENT-KIOSKS-BY-KIOSKID",
+      "transport": "REST",
+      "method": "PUT",
+      "route": "/api/v{version:apiVersion}/management/kiosks/{kioskId:guid}",
+      "controller": "ManagementKiosksController",
+      "action": "UpdateKiosk",
+      "authorization_policies": [
+        "kiosks.update"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-KIOSKS-BY-KIOSKID-STATUS",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/kiosks/{kioskId:guid}/status",
+      "controller": "ManagementKiosksController",
+      "action": "SetKioskStatus",
+      "authorization_policies": [
+        "kiosks.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-STORES-BY-STOREID-KIOSKS-BY-KIOSKID-OPERATIONAL-STATE",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/stores/{storeId:guid}/kiosks/{kioskId:guid}/operational-state",
+      "controller": "ManagementKiosksController",
+      "action": "SetKioskOperationalState",
+      "authorization_policies": [
+        "kiosks.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/organizations",
+      "controller": "ManagementOrganizationsController",
+      "action": "ListOrganizations",
+      "authorization_policies": [
+        "organizations.view"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}",
+      "controller": "ManagementOrganizationsController",
+      "action": "GetOrganization",
+      "authorization_policies": [
+        "organizations.view"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/organizations",
+      "controller": "ManagementOrganizationsController",
+      "action": "CreateOrganization",
+      "authorization_policies": [
+        "organizations.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PUT-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID",
+      "transport": "REST",
+      "method": "PUT",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}",
+      "controller": "ManagementOrganizationsController",
+      "action": "UpdateOrganization",
+      "authorization_policies": [
+        "organizations.update"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-DISABLE",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/disable",
+      "controller": "ManagementOrganizationsController",
+      "action": "DisableOrganization",
+      "authorization_policies": [
+        "organizations.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-ACTIVATE",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/activate",
+      "controller": "ManagementOrganizationsController",
+      "action": "ActivateOrganization",
+      "authorization_policies": [
+        "organizations.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-ROLE-SCOPE-OPTIONS",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/role-scope-options",
+      "controller": "ManagementRoleScopeOptionsController",
+      "action": "GetRoleScopeOptions",
+      "authorization_policies": [
+        "role-scope-options.view"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-STORES",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/stores",
+      "controller": "ManagementStoresController",
+      "action": "ListStores",
+      "authorization_policies": [
+        "stores.view"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-STORES-BY-STOREID",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/stores/{storeId:guid}",
+      "controller": "ManagementStoresController",
+      "action": "GetStore",
+      "authorization_policies": [
+        "stores.view"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-STORES",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/stores",
+      "controller": "ManagementStoresController",
+      "action": "CreateStore",
+      "authorization_policies": [
+        "stores.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PUT-API-V-BY-VERSION-MANAGEMENT-STORES-BY-STOREID",
+      "transport": "REST",
+      "method": "PUT",
+      "route": "/api/v{version:apiVersion}/management/stores/{storeId:guid}",
+      "controller": "ManagementStoresController",
+      "action": "UpdateStore",
+      "authorization_policies": [
+        "stores.update"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-STORES-BY-STOREID-DISABLE",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/stores/{storeId:guid}/disable",
+      "controller": "ManagementStoresController",
+      "action": "DisableStore",
+      "authorization_policies": [
+        "stores.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-STORES-BY-STOREID-ACTIVATE",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/stores/{storeId:guid}/activate",
+      "controller": "ManagementStoresController",
+      "action": "ActivateStore",
+      "authorization_policies": [
+        "stores.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-STORES-BY-STOREID-SALES-PAUSE",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/stores/{storeId:guid}/sales-pause",
+      "controller": "ManagementStoresController",
+      "action": "PauseStoreSales",
+      "authorization_policies": [
+        "stores.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-STORES-BY-STOREID-SALES-RESUME",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/stores/{storeId:guid}/sales-resume",
+      "controller": "ManagementStoresController",
+      "action": "ResumeStoreSales",
+      "authorization_policies": [
+        "stores.manage"
+      ]
+    }
+  ]
+}

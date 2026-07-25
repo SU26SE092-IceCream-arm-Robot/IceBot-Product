@@ -41,13 +41,11 @@ by a backend handler, frontend screen, or task description.
 ## Resolution Rule
 
 When an answer is chosen, create or update the owning product document and add
-the decision date, owner, and implementation consequence. Move extended
-trade-off discussion to `Vault/` when it does not affect day-to-day task
-execution.
+the decision date, owner, and implementation consequence. Keep enough rationale
+here for contributors to apply the decision without external notes.
 
 ## Related Sources
 
 - [Product And Operations Index](../README.md)
 - [Organization, Store, And Kiosk Operating Model](../actors-and-scope/ORGANIZATION_STORE_KIOSK_OPERATING_MODEL.md)
 - [Customer Order And Fulfillment Flow](../journeys/CUSTOMER_ORDER_AND_FULFILLMENT.md)
-- [Franchise Operating Model And UX Complexity](../../../Vault/Product/FRANCHISE_OPERATING_MODEL_AND_UX_COMPLEXITY.md)

@@ -33,8 +33,7 @@ remain in that repository.
   implementing that solution.
 - A confirmed product choice must state actor, scope, goal, happy path, failure
   states, decision authority, and implementation consequence.
-- Keep extended comparison and reasoning in `Vault`; promote the accepted
-  outcome here when implementation depends on it.
+
 
 ## Frontend Audit Rules
 

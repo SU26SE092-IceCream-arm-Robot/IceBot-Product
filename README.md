@@ -11,14 +11,10 @@ Do not read every document by default.
 | `IceBot-Product/product/` | Current shared product truth | Actors, scope, operating model, user-facing journeys, and open product decisions |
 | `IceBot-Product/delivery/` | Cross-repository delivery truth | Target responsibility, capability status, contract change handoff, generated route/message indexes, and AI playbooks |
 | `IceBot-Backend/ARCHITECTURE.md`, `IceBot-Backend/docs/` | Current backend truth | Implemented backend contracts, schema, API, and accepted current design |
-| `Vault/Decisions/` | Advisory rationale | Why options were chosen or rejected |
-| `Vault/Evolution/` | Target planned architecture | Migration direction only; not evidence that target code/schema exists |
-| `Vault/Research/`, `Vault/Learning/`, `Vault/Discussions/` | Advisory evidence/context | Research, exploration, and personal/tooling notes |
 | `IceBot-Tools/` | Tooling truth | Local development tooling, RAG/MCP helpers, generated data, and utility scripts |
 
-When documents conflict, prefer current source-of-truth docs over Vault notes.
-Do not rewrite current repository docs to use a Vault target name before the
-corresponding implementation migration has landed.
+When documents conflict, prefer current source-of-truth documents over
+unconfirmed proposals or external notes.
 
 ## Read First
 
@@ -52,7 +48,6 @@ Start with one of these depending on the task:
 | Backend system flows | [../IceBot-Backend/docs/flows/SYSTEM_FLOWS.md](../IceBot-Backend/docs/flows/SYSTEM_FLOWS.md) |
 | Multi-tenancy | [../IceBot-Backend/docs/architecture/MULTI_TENANCY_RULES.md](../IceBot-Backend/docs/architecture/MULTI_TENANCY_RULES.md) |
 | Local RAG/MCP/tooling | [../IceBot-Tools/README.md](../IceBot-Tools/README.md) |
-| Reasoning history, rejected ideas, trade-offs | [../Vault/README.md](../Vault/README.md) |
 
 ## AI Reading Rules
 
@@ -61,8 +56,8 @@ Start with one of these depending on the task:
 - Treat links as routing hints, not mandatory recursive reads.
 - Do not reread linked files already read in the current task unless the user asks, the file may have changed, or a specific section is needed.
 - Use search before opening many files.
-- Do not load `Vault/` unless the user asks about reasoning, history, trade-offs, rejected designs, or personal notes.
-- Do not treat `Vault/` as implementation truth.
+- Do not depend on documents outside this repository for implementation
+  instructions or product decisions.
 - For code changes, read the relevant code and only the docs needed to understand ownership or contracts.
 - For a user-facing or operational task, read the matching Product & Operations
   document before inferring a role, tenant scope, dashboard, or workflow from

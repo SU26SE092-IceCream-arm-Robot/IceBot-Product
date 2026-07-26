@@ -3,6 +3,226 @@
   "generated_from": "IceBot-Backend ASP.NET controller attributes",
   "operations": [
     {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-INGREDIENTS",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/ingredients",
+      "controller": "ManagementIngredientsController",
+      "action": "List",
+      "authorization_policies": [
+        "ingredients.read"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-INGREDIENTS-BY-INGREDIENTID-STATUS",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/ingredients/{ingredientId:guid}/status",
+      "controller": "ManagementIngredientsController",
+      "action": "SetStatus",
+      "authorization_policies": [
+        "ingredients.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-DELETE-API-V-BY-VERSION-MANAGEMENT-INGREDIENTS-BY-INGREDIENTID",
+      "transport": "REST",
+      "method": "DELETE",
+      "route": "/api/v{version:apiVersion}/management/ingredients/{ingredientId:guid}",
+      "controller": "ManagementIngredientsController",
+      "action": "Delete",
+      "authorization_policies": [
+        "ingredients.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-INGREDIENTS-BY-INGREDIENTID",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/ingredients/{ingredientId:guid}",
+      "controller": "ManagementIngredientsController",
+      "action": "Get",
+      "authorization_policies": [
+        "ingredients.read"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-INGREDIENTS",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/ingredients",
+      "controller": "ManagementIngredientsController",
+      "action": "Create",
+      "authorization_policies": [
+        "ingredients.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PUT-API-V-BY-VERSION-MANAGEMENT-INGREDIENTS-BY-INGREDIENTID",
+      "transport": "REST",
+      "method": "PUT",
+      "route": "/api/v{version:apiVersion}/management/ingredients/{ingredientId:guid}",
+      "controller": "ManagementIngredientsController",
+      "action": "Update",
+      "authorization_policies": [
+        "ingredients.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-PRODUCT-CATEGORIES",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/product-categories",
+      "controller": "ManagementProductCategoriesController",
+      "action": "List",
+      "authorization_policies": [
+        "product-categories.read"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-PRODUCT-CATEGORIES",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/product-categories",
+      "controller": "ManagementProductCategoriesController",
+      "action": "Create",
+      "authorization_policies": [
+        "product-categories.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PUT-API-V-BY-VERSION-MANAGEMENT-PRODUCT-CATEGORIES-BY-CATEGORYID",
+      "transport": "REST",
+      "method": "PUT",
+      "route": "/api/v{version:apiVersion}/management/product-categories/{categoryId:long}",
+      "controller": "ManagementProductCategoriesController",
+      "action": "Update",
+      "authorization_policies": [
+        "product-categories.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-PRODUCT-CATEGORIES-BY-CATEGORYID-STATUS",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/product-categories/{categoryId:long}/status",
+      "controller": "ManagementProductCategoriesController",
+      "action": "SetStatus",
+      "authorization_policies": [
+        "product-categories.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-DELETE-API-V-BY-VERSION-MANAGEMENT-PRODUCT-CATEGORIES-BY-CATEGORYID",
+      "transport": "REST",
+      "method": "DELETE",
+      "route": "/api/v{version:apiVersion}/management/product-categories/{categoryId:long}",
+      "controller": "ManagementProductCategoriesController",
+      "action": "Delete",
+      "authorization_policies": [
+        "product-categories.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-PRODUCTS-BY-PRODUCTID-OPTION-GROUPS",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/products/{productId:guid}/option-groups",
+      "controller": "ManagementProductOptionsController",
+      "action": "CreateGroup",
+      "authorization_policies": [
+        "products.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PUT-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-PRODUCTS-BY-PRODUCTID-OPTION-GROUPS-BY-OPTIONGROUPID",
+      "transport": "REST",
+      "method": "PUT",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/products/{productId:guid}/option-groups/{optionGroupId:long}",
+      "controller": "ManagementProductOptionsController",
+      "action": "UpdateGroup",
+      "authorization_policies": [
+        "products.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-PRODUCTS-BY-PRODUCTID-OPTION-GROUPS-BY-OPTIONGROUPID-STATUS",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/products/{productId:guid}/option-groups/{optionGroupId:long}/status",
+      "controller": "ManagementProductOptionsController",
+      "action": "SetGroupStatus",
+      "authorization_policies": [
+        "products.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-DELETE-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-PRODUCTS-BY-PRODUCTID-OPTION-GROUPS-BY-OPTIONGROUPID",
+      "transport": "REST",
+      "method": "DELETE",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/products/{productId:guid}/option-groups/{optionGroupId:long}",
+      "controller": "ManagementProductOptionsController",
+      "action": "DeleteGroup",
+      "authorization_policies": [
+        "products.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-PRODUCTS-BY-PRODUCTID-OPTION-GROUPS-BY-OPTIONGROUPID-OPTIONS",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/products/{productId:guid}/option-groups/{optionGroupId:long}/options",
+      "controller": "ManagementProductOptionsController",
+      "action": "CreateOption",
+      "authorization_policies": [
+        "products.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PUT-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-PRODUCTS-BY-PRODUCTID-OPTION-GROUPS-BY-OPTIONGROUPID-OPTIONS-BY-PRODUCTOPTIONID",
+      "transport": "REST",
+      "method": "PUT",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/products/{productId:guid}/option-groups/{optionGroupId:long}/options/{productOptionId:guid}",
+      "controller": "ManagementProductOptionsController",
+      "action": "UpdateOption",
+      "authorization_policies": [
+        "products.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PUT-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-PRODUCTS-BY-PRODUCTID-OPTION-GROUPS-BY-OPTIONGROUPID-OPTIONS-BY-PRODUCTOPTIONID-INGREDIENT-REQUIREMENTS",
+      "transport": "REST",
+      "method": "PUT",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/products/{productId:guid}/option-groups/{optionGroupId:long}/options/{productOptionId:guid}/ingredient-requirements",
+      "controller": "ManagementProductOptionsController",
+      "action": "ReplaceIngredientRequirements",
+      "authorization_policies": [
+        "products.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-PRODUCTS-BY-PRODUCTID-OPTION-GROUPS-BY-OPTIONGROUPID-OPTIONS-BY-PRODUCTOPTIONID-AVAILABILITY",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/products/{productId:guid}/option-groups/{optionGroupId:long}/options/{productOptionId:guid}/availability",
+      "controller": "ManagementProductOptionsController",
+      "action": "SetOptionAvailability",
+      "authorization_policies": [
+        "products.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-DELETE-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-PRODUCTS-BY-PRODUCTID-OPTION-GROUPS-BY-OPTIONGROUPID-OPTIONS-BY-PRODUCTOPTIONID",
+      "transport": "REST",
+      "method": "DELETE",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/products/{productId:guid}/option-groups/{optionGroupId:long}/options/{productOptionId:guid}",
+      "controller": "ManagementProductOptionsController",
+      "action": "DeleteOption",
+      "authorization_policies": [
+        "products.manage"
+      ]
+    },
+    {
       "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-PRODUCTS",
       "transport": "REST",
       "method": "GET",
@@ -124,6 +344,182 @@
       ]
     },
     {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-PRODUCT-TEMPLATES-BY-PRODUCTID-OPTION-GROUPS",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/product-templates/{productId:guid}/option-groups",
+      "controller": "ManagementProductTemplateOptionsController",
+      "action": "CreateGroup",
+      "authorization_policies": [
+        "product-templates.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PUT-API-V-BY-VERSION-MANAGEMENT-PRODUCT-TEMPLATES-BY-PRODUCTID-OPTION-GROUPS-BY-OPTIONGROUPID",
+      "transport": "REST",
+      "method": "PUT",
+      "route": "/api/v{version:apiVersion}/management/product-templates/{productId:guid}/option-groups/{optionGroupId:long}",
+      "controller": "ManagementProductTemplateOptionsController",
+      "action": "UpdateGroup",
+      "authorization_policies": [
+        "product-templates.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-PRODUCT-TEMPLATES-BY-PRODUCTID-OPTION-GROUPS-BY-OPTIONGROUPID-STATUS",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/product-templates/{productId:guid}/option-groups/{optionGroupId:long}/status",
+      "controller": "ManagementProductTemplateOptionsController",
+      "action": "SetGroupStatus",
+      "authorization_policies": [
+        "product-templates.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-DELETE-API-V-BY-VERSION-MANAGEMENT-PRODUCT-TEMPLATES-BY-PRODUCTID-OPTION-GROUPS-BY-OPTIONGROUPID",
+      "transport": "REST",
+      "method": "DELETE",
+      "route": "/api/v{version:apiVersion}/management/product-templates/{productId:guid}/option-groups/{optionGroupId:long}",
+      "controller": "ManagementProductTemplateOptionsController",
+      "action": "DeleteGroup",
+      "authorization_policies": [
+        "product-templates.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-PRODUCT-TEMPLATES-BY-PRODUCTID-OPTION-GROUPS-BY-OPTIONGROUPID-OPTIONS",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/product-templates/{productId:guid}/option-groups/{optionGroupId:long}/options",
+      "controller": "ManagementProductTemplateOptionsController",
+      "action": "CreateOption",
+      "authorization_policies": [
+        "product-templates.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PUT-API-V-BY-VERSION-MANAGEMENT-PRODUCT-TEMPLATES-BY-PRODUCTID-OPTION-GROUPS-BY-OPTIONGROUPID-OPTIONS-BY-PRODUCTOPTIONID",
+      "transport": "REST",
+      "method": "PUT",
+      "route": "/api/v{version:apiVersion}/management/product-templates/{productId:guid}/option-groups/{optionGroupId:long}/options/{productOptionId:guid}",
+      "controller": "ManagementProductTemplateOptionsController",
+      "action": "UpdateOption",
+      "authorization_policies": [
+        "product-templates.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PUT-API-V-BY-VERSION-MANAGEMENT-PRODUCT-TEMPLATES-BY-PRODUCTID-OPTION-GROUPS-BY-OPTIONGROUPID-OPTIONS-BY-PRODUCTOPTIONID-INGREDIENT-REQUIREMENTS",
+      "transport": "REST",
+      "method": "PUT",
+      "route": "/api/v{version:apiVersion}/management/product-templates/{productId:guid}/option-groups/{optionGroupId:long}/options/{productOptionId:guid}/ingredient-requirements",
+      "controller": "ManagementProductTemplateOptionsController",
+      "action": "ReplaceIngredientRequirements",
+      "authorization_policies": [
+        "product-templates.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-PRODUCT-TEMPLATES-BY-PRODUCTID-OPTION-GROUPS-BY-OPTIONGROUPID-OPTIONS-BY-PRODUCTOPTIONID-AVAILABILITY",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/product-templates/{productId:guid}/option-groups/{optionGroupId:long}/options/{productOptionId:guid}/availability",
+      "controller": "ManagementProductTemplateOptionsController",
+      "action": "SetOptionAvailability",
+      "authorization_policies": [
+        "product-templates.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-DELETE-API-V-BY-VERSION-MANAGEMENT-PRODUCT-TEMPLATES-BY-PRODUCTID-OPTION-GROUPS-BY-OPTIONGROUPID-OPTIONS-BY-PRODUCTOPTIONID",
+      "transport": "REST",
+      "method": "DELETE",
+      "route": "/api/v{version:apiVersion}/management/product-templates/{productId:guid}/option-groups/{optionGroupId:long}/options/{productOptionId:guid}",
+      "controller": "ManagementProductTemplateOptionsController",
+      "action": "DeleteOption",
+      "authorization_policies": [
+        "product-templates.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-PRODUCT-TEMPLATES-BY-PRODUCTID-VARIANTS-BY-VARIANTID-RECIPES",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/product-templates/{productId:guid}/variants/{variantId:guid}/recipes",
+      "controller": "ManagementProductTemplateRecipesController",
+      "action": "List",
+      "authorization_policies": [
+        "product-templates.read"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-PRODUCT-TEMPLATES-BY-PRODUCTID-VARIANTS-BY-VARIANTID-RECIPES-BY-RECIPEID",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/product-templates/{productId:guid}/variants/{variantId:guid}/recipes/{recipeId:guid}",
+      "controller": "ManagementProductTemplateRecipesController",
+      "action": "Get",
+      "authorization_policies": [
+        "product-templates.read"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-PRODUCT-TEMPLATES-BY-PRODUCTID-VARIANTS-BY-VARIANTID-RECIPES",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/product-templates/{productId:guid}/variants/{variantId:guid}/recipes",
+      "controller": "ManagementProductTemplateRecipesController",
+      "action": "Create",
+      "authorization_policies": [
+        "product-templates.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PUT-API-V-BY-VERSION-MANAGEMENT-PRODUCT-TEMPLATES-BY-PRODUCTID-VARIANTS-BY-VARIANTID-RECIPES-BY-RECIPEID",
+      "transport": "REST",
+      "method": "PUT",
+      "route": "/api/v{version:apiVersion}/management/product-templates/{productId:guid}/variants/{variantId:guid}/recipes/{recipeId:guid}",
+      "controller": "ManagementProductTemplateRecipesController",
+      "action": "Update",
+      "authorization_policies": [
+        "product-templates.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PUT-API-V-BY-VERSION-MANAGEMENT-PRODUCT-TEMPLATES-BY-PRODUCTID-VARIANTS-BY-VARIANTID-RECIPES-BY-RECIPEID-ITEMS",
+      "transport": "REST",
+      "method": "PUT",
+      "route": "/api/v{version:apiVersion}/management/product-templates/{productId:guid}/variants/{variantId:guid}/recipes/{recipeId:guid}/items",
+      "controller": "ManagementProductTemplateRecipesController",
+      "action": "ReplaceItems",
+      "authorization_policies": [
+        "product-templates.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-PRODUCT-TEMPLATES-BY-PRODUCTID-VARIANTS-BY-VARIANTID-RECIPES-BY-RECIPEID-STATUS",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/product-templates/{productId:guid}/variants/{variantId:guid}/recipes/{recipeId:guid}/status",
+      "controller": "ManagementProductTemplateRecipesController",
+      "action": "SetStatus",
+      "authorization_policies": [
+        "product-templates.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-PRODUCT-TEMPLATES-BY-PRODUCTID-VARIANTS-BY-VARIANTID-RECIPES-BY-RECIPEID-VERSIONS",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/product-templates/{productId:guid}/variants/{variantId:guid}/recipes/{recipeId:guid}/versions",
+      "controller": "ManagementProductTemplateRecipesController",
+      "action": "CreateVersion",
+      "authorization_policies": [
+        "product-templates.manage"
+      ]
+    },
+    {
       "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-PRODUCT-TEMPLATES",
       "transport": "REST",
       "method": "GET",
@@ -231,6 +627,193 @@
       "action": "DeleteVariant",
       "authorization_policies": [
         "product-templates.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-PRODUCTS-BY-PRODUCTID-VARIANTS-BY-VARIANTID-RECIPES",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/products/{productId:guid}/variants/{variantId:guid}/recipes",
+      "controller": "ManagementRecipesController",
+      "action": "List",
+      "authorization_policies": [
+        "products.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-PRODUCTS-BY-PRODUCTID-VARIANTS-BY-VARIANTID-RECIPES-BY-RECIPEID",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/products/{productId:guid}/variants/{variantId:guid}/recipes/{recipeId:guid}",
+      "controller": "ManagementRecipesController",
+      "action": "Get",
+      "authorization_policies": [
+        "products.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-PRODUCTS-BY-PRODUCTID-VARIANTS-BY-VARIANTID-RECIPES",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/products/{productId:guid}/variants/{variantId:guid}/recipes",
+      "controller": "ManagementRecipesController",
+      "action": "Create",
+      "authorization_policies": [
+        "products.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PUT-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-PRODUCTS-BY-PRODUCTID-VARIANTS-BY-VARIANTID-RECIPES-BY-RECIPEID",
+      "transport": "REST",
+      "method": "PUT",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/products/{productId:guid}/variants/{variantId:guid}/recipes/{recipeId:guid}",
+      "controller": "ManagementRecipesController",
+      "action": "Update",
+      "authorization_policies": [
+        "products.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PUT-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-PRODUCTS-BY-PRODUCTID-VARIANTS-BY-VARIANTID-RECIPES-BY-RECIPEID-ITEMS",
+      "transport": "REST",
+      "method": "PUT",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/products/{productId:guid}/variants/{variantId:guid}/recipes/{recipeId:guid}/items",
+      "controller": "ManagementRecipesController",
+      "action": "ReplaceItems",
+      "authorization_policies": [
+        "products.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-PRODUCTS-BY-PRODUCTID-VARIANTS-BY-VARIANTID-RECIPES-BY-RECIPEID-STATUS",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/products/{productId:guid}/variants/{variantId:guid}/recipes/{recipeId:guid}/status",
+      "controller": "ManagementRecipesController",
+      "action": "SetStatus",
+      "authorization_policies": [
+        "products.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-PRODUCTS-BY-PRODUCTID-VARIANTS-BY-VARIANTID-RECIPES-BY-RECIPEID-VERSIONS",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/products/{productId:guid}/variants/{variantId:guid}/recipes/{recipeId:guid}/versions",
+      "controller": "ManagementRecipesController",
+      "action": "CreateVersion",
+      "authorization_policies": [
+        "products.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-DEVICE-TYPES",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/device-types",
+      "controller": "ManagementDeviceCatalogController",
+      "action": "ListTypes",
+      "authorization_policies": [
+        "device-catalog.read"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-DEVICE-TYPES-BY-DEVICETYPEID",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/device-types/{deviceTypeId:long}",
+      "controller": "ManagementDeviceCatalogController",
+      "action": "GetType",
+      "authorization_policies": [
+        "device-catalog.read"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-DEVICE-TYPES-BY-DEVICETYPEID-MODELS",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/device-types/{deviceTypeId:long}/models",
+      "controller": "ManagementDeviceCatalogController",
+      "action": "ListModels",
+      "authorization_policies": [
+        "device-catalog.read"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-DEVICE-MODELS-BY-DEVICEMODELID",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/device-models/{deviceModelId:guid}",
+      "controller": "ManagementDeviceCatalogController",
+      "action": "GetModel",
+      "authorization_policies": [
+        "device-catalog.read"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-DEVICE-TYPES",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/device-types",
+      "controller": "ManagementDeviceCatalogController",
+      "action": "CreateType",
+      "authorization_policies": [
+        "device-catalog.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PUT-API-V-BY-VERSION-MANAGEMENT-DEVICE-TYPES-BY-DEVICETYPEID",
+      "transport": "REST",
+      "method": "PUT",
+      "route": "/api/v{version:apiVersion}/management/device-types/{deviceTypeId:long}",
+      "controller": "ManagementDeviceCatalogController",
+      "action": "UpdateType",
+      "authorization_policies": [
+        "device-catalog.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-DEVICE-TYPES-BY-DEVICETYPEID-STATUS",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/device-types/{deviceTypeId:long}/status",
+      "controller": "ManagementDeviceCatalogController",
+      "action": "SetTypeStatus",
+      "authorization_policies": [
+        "device-catalog.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-DEVICE-TYPES-BY-DEVICETYPEID-MODELS",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/device-types/{deviceTypeId:long}/models",
+      "controller": "ManagementDeviceCatalogController",
+      "action": "CreateModel",
+      "authorization_policies": [
+        "device-catalog.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PUT-API-V-BY-VERSION-MANAGEMENT-DEVICE-MODELS-BY-DEVICEMODELID",
+      "transport": "REST",
+      "method": "PUT",
+      "route": "/api/v{version:apiVersion}/management/device-models/{deviceModelId:guid}",
+      "controller": "ManagementDeviceCatalogController",
+      "action": "UpdateModel",
+      "authorization_policies": [
+        "device-catalog.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-DELETE-API-V-BY-VERSION-MANAGEMENT-DEVICE-MODELS-BY-DEVICEMODELID",
+      "transport": "REST",
+      "method": "DELETE",
+      "route": "/api/v{version:apiVersion}/management/device-models/{deviceModelId:guid}",
+      "controller": "ManagementDeviceCatalogController",
+      "action": "RetireModel",
+      "authorization_policies": [
+        "device-catalog.manage"
       ]
     },
     {
@@ -777,6 +1360,94 @@
       ]
     },
     {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-KIOSKS-BY-KIOSKID-INVENTORY-TOPOLOGY",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/kiosks/{kioskId:guid}/inventory/topology",
+      "controller": "ManagementInventoryTopologyController",
+      "action": "GetTopology",
+      "authorization_policies": [
+        "inventory.view"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-KIOSKS-BY-KIOSKID-INVENTORY-DISPENSER-STATES",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/kiosks/{kioskId:guid}/inventory/dispenser-states",
+      "controller": "ManagementInventoryTopologyController",
+      "action": "Create",
+      "authorization_policies": [
+        "inventory.configure"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-KIOSKS-BY-KIOSKID-INVENTORY-DISPENSER-STATES-BY-DISPENSERSTATEID-REBIND",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/kiosks/{kioskId:guid}/inventory/dispenser-states/{dispenserStateId:guid}/rebind",
+      "controller": "ManagementInventoryTopologyController",
+      "action": "Rebind",
+      "authorization_policies": [
+        "inventory.configure"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-KIOSKS-BY-KIOSKID-INVENTORY-DISPENSER-STATES-BY-DISPENSERSTATEID-REBIND-HISTORY",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/kiosks/{kioskId:guid}/inventory/dispenser-states/{dispenserStateId:guid}/rebind-history",
+      "controller": "ManagementInventoryTopologyController",
+      "action": "GetRebindHistory",
+      "authorization_policies": [
+        "inventory.view"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-KIOSKS-BY-KIOSKID-INVENTORY-DISPENSER-STATES-BY-DISPENSERSTATEID-HISTORY",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/kiosks/{kioskId:guid}/inventory/dispenser-states/{dispenserStateId:guid}/history",
+      "controller": "ManagementInventoryTopologyController",
+      "action": "GetHistory",
+      "authorization_policies": [
+        "inventory.view"
+      ]
+    },
+    {
+      "id": "OP-REST-PUT-API-V-BY-VERSION-MANAGEMENT-KIOSKS-BY-KIOSKID-INVENTORY-DISPENSER-STATES-BY-DISPENSERSTATEID",
+      "transport": "REST",
+      "method": "PUT",
+      "route": "/api/v{version:apiVersion}/management/kiosks/{kioskId:guid}/inventory/dispenser-states/{dispenserStateId:guid}",
+      "controller": "ManagementInventoryTopologyController",
+      "action": "Update",
+      "authorization_policies": [
+        "inventory.configure"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-KIOSKS-BY-KIOSKID-INVENTORY-DISPENSER-STATES-BY-DISPENSERSTATEID-STATUS",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/kiosks/{kioskId:guid}/inventory/dispenser-states/{dispenserStateId:guid}/status",
+      "controller": "ManagementInventoryTopologyController",
+      "action": "SetStatus",
+      "authorization_policies": [
+        "inventory.configure"
+      ]
+    },
+    {
+      "id": "OP-REST-DELETE-API-V-BY-VERSION-MANAGEMENT-KIOSKS-BY-KIOSKID-INVENTORY-DISPENSER-STATES-BY-DISPENSERSTATEID",
+      "transport": "REST",
+      "method": "DELETE",
+      "route": "/api/v{version:apiVersion}/management/kiosks/{kioskId:guid}/inventory/dispenser-states/{dispenserStateId:guid}",
+      "controller": "ManagementInventoryTopologyController",
+      "action": "Delete",
+      "authorization_policies": [
+        "inventory.configure"
+      ]
+    },
+    {
       "id": "OP-REST-POST-API-V-BY-VERSION-IOT-EXECUTION-ENDPOINTS-BY-ENDPOINTID-TELEMETRY-EVENTS",
       "transport": "REST",
       "method": "POST",
@@ -1043,6 +1714,39 @@
       ]
     },
     {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-NOTIFICATION-DELIVERIES",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/notification-deliveries",
+      "controller": "ManagementNotificationDeliveriesController",
+      "action": "List",
+      "authorization_policies": [
+        "operations.diagnostics"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-NOTIFICATION-DELIVERIES-BY-DELIVERYID",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/notification-deliveries/{deliveryId:guid}",
+      "controller": "ManagementNotificationDeliveriesController",
+      "action": "Get",
+      "authorization_policies": [
+        "operations.diagnostics"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-NOTIFICATION-DELIVERIES-BY-DELIVERYID-REQUEUE",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/notification-deliveries/{deliveryId:guid}/requeue",
+      "controller": "ManagementNotificationDeliveriesController",
+      "action": "Requeue",
+      "authorization_policies": [
+        "notifications.manage"
+      ]
+    },
+    {
       "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-SYNC-DEAD-LETTERS",
       "transport": "REST",
       "method": "GET",
@@ -1186,6 +1890,72 @@
       ]
     },
     {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-PRODUCTION-INCIDENTS",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/production-incidents",
+      "controller": "ManagementProductionIncidentsController",
+      "action": "List",
+      "authorization_policies": [
+        "orders.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-ORDERS-BY-ORDERID-PRODUCTION-INCIDENTS-BY-INCIDENTID",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/orders/{orderId:guid}/production-incidents/{incidentId:guid}",
+      "controller": "ManagementProductionIncidentsController",
+      "action": "Get",
+      "authorization_policies": [
+        "orders.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORDERS-BY-ORDERID-ITEMS-BY-ORDERITEMID-PRODUCTION-INCIDENTS",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/orders/{orderId:guid}/items/{orderItemId:guid}/production-incidents",
+      "controller": "ManagementProductionIncidentsController",
+      "action": "Open",
+      "authorization_policies": [
+        "orders.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-ORDERS-BY-ORDERID-PRODUCTION-INCIDENTS-BY-INCIDENTID-INSPECTION",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/orders/{orderId:guid}/production-incidents/{incidentId:guid}/inspection",
+      "controller": "ManagementProductionIncidentsController",
+      "action": "Inspect",
+      "authorization_policies": [
+        "orders.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORDERS-BY-ORDERID-PRODUCTION-INCIDENTS-BY-INCIDENTID-RESOLUTION",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/orders/{orderId:guid}/production-incidents/{incidentId:guid}/resolution",
+      "controller": "ManagementProductionIncidentsController",
+      "action": "SelectResolution",
+      "authorization_policies": [
+        "orders.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-ORDERS-BY-ORDERID-PRODUCTION-INCIDENTS-BY-INCIDENTID-COMPLETE",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/orders/{orderId:guid}/production-incidents/{incidentId:guid}/complete",
+      "controller": "ManagementProductionIncidentsController",
+      "action": "Complete",
+      "authorization_policies": [
+        "orders.manage"
+      ]
+    },
+    {
       "id": "OP-REST-POST-API-V-BY-VERSION-ORDERS",
       "transport": "REST",
       "method": "POST",
@@ -1231,6 +2001,17 @@
       "authorization_policies": []
     },
     {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-ORDERS-BY-ORDERID-PAYMENT-DIAGNOSTICS",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/orders/{orderId:guid}/payment-diagnostics",
+      "controller": "ManagementPaymentDiagnosticsController",
+      "action": "List",
+      "authorization_policies": [
+        "operations.diagnostics"
+      ]
+    },
+    {
       "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-PAYMENT-METHODS",
       "transport": "REST",
       "method": "GET",
@@ -1251,6 +2032,28 @@
       "authorization_policies": [
         "payments.manage",
         "payment-methods.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-PAYMENT-SESSION-INTERVENTIONS",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/payment-session-interventions",
+      "controller": "ManagementPaymentOperationsController",
+      "action": "ListInterventions",
+      "authorization_policies": [
+        "payments.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORDERS-BY-ORDERID-PAYMENT-TRANSACTIONS-BY-PAYMENTTRANSACTIONID-RECONCILE",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/orders/{orderId:guid}/payment-transactions/{paymentTransactionId:guid}/reconcile",
+      "controller": "ManagementPaymentOperationsController",
+      "action": "Reconcile",
+      "authorization_policies": [
+        "payments.manage"
       ]
     },
     {
@@ -1417,6 +2220,17 @@
       ]
     },
     {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-KIOSKS-BY-KIOSKID-CONFIGURATION-RELEASES-BY-RELEASEID-INVENTORY-READINESS",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/kiosks/{kioskId:guid}/configuration-releases/{releaseId:guid}/inventory-readiness",
+      "controller": "ManagementConfigurationInventoryReadinessController",
+      "action": "Get",
+      "authorization_policies": [
+        "inventory.view"
+      ]
+    },
+    {
       "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-CONFIGURATION-RELEASES",
       "transport": "REST",
       "method": "GET",
@@ -1505,6 +2319,292 @@
       ]
     },
     {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-PRODUCTION-PACKAGE-INSTALLATIONS",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/production-package-installations",
+      "controller": "ManagementProductionPackageInstallationsController",
+      "action": "List",
+      "authorization_policies": [
+        "package.read"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-PRODUCTION-PACKAGE-INSTALLATIONS-PREVIEW",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/production-package-installations/preview",
+      "controller": "ManagementProductionPackageInstallationsController",
+      "action": "Preview",
+      "authorization_policies": [
+        "package.read"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-PRODUCTION-PACKAGE-INSTALLATIONS",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/production-package-installations",
+      "controller": "ManagementProductionPackageInstallationsController",
+      "action": "Install",
+      "authorization_policies": [
+        "package.install"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-PRODUCTION-PACKAGE-INSTALLATIONS-BY-INSTALLATIONID",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/production-package-installations/{installationId:guid}",
+      "controller": "ManagementProductionPackageInstallationsController",
+      "action": "Get",
+      "authorization_policies": [
+        "package.read"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-PRODUCTION-PACKAGE-INSTALLATIONS-BY-INSTALLATIONID-WORKSPACE",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/production-package-installations/{installationId:guid}/workspace",
+      "controller": "ManagementProductionPackageInstallationsController",
+      "action": "Workspace",
+      "authorization_policies": [
+        "package.read"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-PRODUCTION-PACKAGE-INSTALLATIONS-BY-INSTALLATIONID-FORK",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/production-package-installations/{installationId:guid}/fork",
+      "controller": "ManagementProductionPackageInstallationsController",
+      "action": "Fork",
+      "authorization_policies": [
+        "package.fork"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-PRODUCTION-PACKAGE-INSTALLATIONS-BY-INSTALLATIONID-RETRY",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/production-package-installations/{installationId:guid}/retry",
+      "controller": "ManagementProductionPackageInstallationsController",
+      "action": "Retry",
+      "authorization_policies": [
+        "package.install"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-PRODUCTION-PACKAGE-INSTALLATIONS-BY-INSTALLATIONID-REPAIR",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/production-package-installations/{installationId:guid}/repair",
+      "controller": "ManagementProductionPackageInstallationsController",
+      "action": "Repair",
+      "authorization_policies": [
+        "package.install"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-PRODUCTION-PACKAGE-INSTALLATIONS-BY-INSTALLATIONID-UPGRADES-PREVIEW",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/production-package-installations/{installationId:guid}/upgrades/preview",
+      "controller": "ManagementProductionPackageInstallationsController",
+      "action": "PreviewUpgrade",
+      "authorization_policies": [
+        "package.read"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-PRODUCTION-PACKAGE-INSTALLATIONS-BY-INSTALLATIONID-UPGRADES",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/production-package-installations/{installationId:guid}/upgrades",
+      "controller": "ManagementProductionPackageInstallationsController",
+      "action": "Upgrade",
+      "authorization_policies": [
+        "package.install"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-PRODUCTION-PACKAGE-INSTALLATIONS-BY-INSTALLATIONID-UPGRADES",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/production-package-installations/{installationId:guid}/upgrades",
+      "controller": "ManagementProductionPackageInstallationsController",
+      "action": "ListUpgrades",
+      "authorization_policies": [
+        "package.read"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-PRODUCTION-PACKAGE-INSTALLATIONS-BY-INSTALLATIONID-UPGRADES-BY-UPGRADEID",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/production-package-installations/{installationId:guid}/upgrades/{upgradeId:guid}",
+      "controller": "ManagementProductionPackageInstallationsController",
+      "action": "GetUpgrade",
+      "authorization_policies": [
+        "package.read"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-PRODUCTION-PACKAGE-INSTALLATIONS-BY-INSTALLATIONID-UPGRADES-BY-UPGRADEID-CUTOVER",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/production-package-installations/{installationId:guid}/upgrades/{upgradeId:guid}/cutover",
+      "controller": "ManagementProductionPackageInstallationsController",
+      "action": "CutoverUpgrade",
+      "authorization_policies": [
+        "package.install"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-PRODUCTION-PACKAGE-INSTALLATIONS-BY-INSTALLATIONID-UPGRADES-BY-UPGRADEID-ABANDON",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/production-package-installations/{installationId:guid}/upgrades/{upgradeId:guid}/abandon",
+      "controller": "ManagementProductionPackageInstallationsController",
+      "action": "AbandonUpgrade",
+      "authorization_policies": [
+        "package.install"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-PRODUCTION-PACKAGE-INSTALLATIONS-BY-INSTALLATIONID-UPGRADES-BY-UPGRADEID-ROLLBACK",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/production-package-installations/{installationId:guid}/upgrades/{upgradeId:guid}/rollback",
+      "controller": "ManagementProductionPackageInstallationsController",
+      "action": "RollbackUpgrade",
+      "authorization_policies": [
+        "release.rollback"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-PRODUCTION-PACKAGES",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/production-packages",
+      "controller": "ManagementProductionPackagesController",
+      "action": "List",
+      "authorization_policies": [
+        "package.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-PRODUCTION-PACKAGES-BY-PACKAGEID",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/production-packages/{packageId:guid}",
+      "controller": "ManagementProductionPackagesController",
+      "action": "Get",
+      "authorization_policies": [
+        "package.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-PRODUCTION-PACKAGES",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/production-packages",
+      "controller": "ManagementProductionPackagesController",
+      "action": "Create",
+      "authorization_policies": [
+        "package.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-PRODUCTION-PACKAGES-BY-PACKAGEID-VERSIONS",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/production-packages/{packageId:guid}/versions",
+      "controller": "ManagementProductionPackagesController",
+      "action": "CreateVersion",
+      "authorization_policies": [
+        "package.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PUT-API-V-BY-VERSION-MANAGEMENT-PRODUCTION-PACKAGES-BY-PACKAGEID",
+      "transport": "REST",
+      "method": "PUT",
+      "route": "/api/v{version:apiVersion}/management/production-packages/{packageId:guid}",
+      "controller": "ManagementProductionPackagesController",
+      "action": "Update",
+      "authorization_policies": [
+        "package.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-PRODUCTION-PACKAGES-BY-PACKAGEID-RETIRE",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/production-packages/{packageId:guid}/retire",
+      "controller": "ManagementProductionPackagesController",
+      "action": "RetirePackage",
+      "authorization_policies": [
+        "package.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-PRODUCTION-PACKAGES-BY-PACKAGEID-VERSIONS-BY-VERSIONID-DEFINITION",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/production-packages/{packageId:guid}/versions/{versionId:guid}/definition",
+      "controller": "ManagementProductionPackagesController",
+      "action": "GetDefinition",
+      "authorization_policies": [
+        "package.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PUT-API-V-BY-VERSION-MANAGEMENT-PRODUCTION-PACKAGES-BY-PACKAGEID-VERSIONS-BY-VERSIONID-DEFINITION",
+      "transport": "REST",
+      "method": "PUT",
+      "route": "/api/v{version:apiVersion}/management/production-packages/{packageId:guid}/versions/{versionId:guid}/definition",
+      "controller": "ManagementProductionPackagesController",
+      "action": "ReplaceDefinition",
+      "authorization_policies": [
+        "package.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-PRODUCTION-PACKAGES-BY-PACKAGEID-VERSIONS-BY-VERSIONID-PUBLISH",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/production-packages/{packageId:guid}/versions/{versionId:guid}/publish",
+      "controller": "ManagementProductionPackagesController",
+      "action": "Publish",
+      "authorization_policies": [
+        "package.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-PRODUCTION-PACKAGES-BY-PACKAGEID-VERSIONS-BY-VERSIONID-RETIRE",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/production-packages/{packageId:guid}/versions/{versionId:guid}/retire",
+      "controller": "ManagementProductionPackagesController",
+      "action": "Retire",
+      "authorization_policies": [
+        "package.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-PRODUCTION-PACKAGES-CATALOG",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/production-packages/catalog",
+      "controller": "ManagementProductionPackagesController",
+      "action": "Catalog",
+      "authorization_policies": [
+        "package.read"
+      ]
+    },
+    {
       "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-ROBOT-ARTIFACTS",
       "transport": "REST",
       "method": "GET",
@@ -1538,10 +2638,10 @@
       ]
     },
     {
-      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-ROBOT-ARTIFACTS-BULK",
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-ROBOT-ARTIFACTS",
       "transport": "REST",
       "method": "POST",
-      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/robot-artifacts/bulk",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/robot-artifacts",
       "controller": "ManagementRobotArtifactsController",
       "action": "BulkUploadRobotArtifacts",
       "authorization_policies": [
@@ -1571,10 +2671,10 @@
       ]
     },
     {
-      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-ROBOT-ARTIFACTS-PUBLISH-BULK",
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-ROBOT-ARTIFACTS-PUBLISH",
       "transport": "REST",
       "method": "PATCH",
-      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/robot-artifacts/publish-bulk",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/robot-artifacts/publish",
       "controller": "ManagementRobotArtifactsController",
       "action": "BulkPublishRobotArtifacts",
       "authorization_policies": [
@@ -1615,6 +2715,215 @@
       ]
     },
     {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-ROBOT-ARTIFACT-TEMPLATE-CONTRACTS",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/robot-artifact-template-contracts",
+      "controller": "ManagementRobotArtifactTechnicalContractsController",
+      "action": "ListTemplates",
+      "authorization_policies": [
+        "artifact-template.read"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-ROBOT-ARTIFACT-TEMPLATE-CONTRACTS-BY-CONTRACTID",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/robot-artifact-template-contracts/{contractId:guid}",
+      "controller": "ManagementRobotArtifactTechnicalContractsController",
+      "action": "GetTemplate",
+      "authorization_policies": [
+        "artifact-template.read"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ROBOT-ARTIFACT-TEMPLATE-CONTRACTS",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/robot-artifact-template-contracts",
+      "controller": "ManagementRobotArtifactTechnicalContractsController",
+      "action": "CreateTemplate",
+      "authorization_policies": [
+        "artifact-template.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-ROBOT-ARTIFACT-TEMPLATE-CONTRACTS-BY-CONTRACTID-PUBLISH",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/robot-artifact-template-contracts/{contractId:guid}/publish",
+      "controller": "ManagementRobotArtifactTechnicalContractsController",
+      "action": "PublishTemplate",
+      "authorization_policies": [
+        "artifact-template.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PUT-API-V-BY-VERSION-MANAGEMENT-ROBOT-ARTIFACT-TEMPLATE-CONTRACTS-BY-CONTRACTID",
+      "transport": "REST",
+      "method": "PUT",
+      "route": "/api/v{version:apiVersion}/management/robot-artifact-template-contracts/{contractId:guid}",
+      "controller": "ManagementRobotArtifactTechnicalContractsController",
+      "action": "ReplaceTemplate",
+      "authorization_policies": [
+        "artifact-template.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ROBOT-ARTIFACT-TEMPLATE-CONTRACTS-BY-CONTRACTID-VALIDATION-PREVIEW",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/robot-artifact-template-contracts/{contractId:guid}/validation-preview",
+      "controller": "ManagementRobotArtifactTechnicalContractsController",
+      "action": "ValidateTemplate",
+      "authorization_policies": [
+        "artifact-template.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-ROBOT-ARTIFACT-TEMPLATE-CONTRACTS-BY-CONTRACTID-RETIRE",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/robot-artifact-template-contracts/{contractId:guid}/retire",
+      "controller": "ManagementRobotArtifactTechnicalContractsController",
+      "action": "RetireTemplate",
+      "authorization_policies": [
+        "artifact-template.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-DELETE-API-V-BY-VERSION-MANAGEMENT-ROBOT-ARTIFACT-TEMPLATE-CONTRACTS-BY-CONTRACTID",
+      "transport": "REST",
+      "method": "DELETE",
+      "route": "/api/v{version:apiVersion}/management/robot-artifact-template-contracts/{contractId:guid}",
+      "controller": "ManagementRobotArtifactTechnicalContractsController",
+      "action": "DiscardTemplate",
+      "authorization_policies": [
+        "artifact-template.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-ROBOT-ARTIFACT-TECHNICAL-CONTRACTS",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/robot-artifact-technical-contracts",
+      "controller": "ManagementRobotArtifactTechnicalContractsController",
+      "action": "ListOrganization",
+      "authorization_policies": [
+        "artifact.read"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-ROBOT-ARTIFACT-TECHNICAL-CONTRACTS-BY-CONTRACTID",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/robot-artifact-technical-contracts/{contractId:guid}",
+      "controller": "ManagementRobotArtifactTechnicalContractsController",
+      "action": "GetOrganization",
+      "authorization_policies": [
+        "artifact.read"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-ROBOT-ARTIFACT-TECHNICAL-CONTRACTS",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/robot-artifact-technical-contracts",
+      "controller": "ManagementRobotArtifactTechnicalContractsController",
+      "action": "CreateOrganization",
+      "authorization_policies": [
+        "artifact.upload"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-ROBOT-ARTIFACT-TECHNICAL-CONTRACTS-IMPORT-SIDECARS",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/robot-artifact-technical-contracts/import-sidecars",
+      "controller": "ManagementRobotArtifactTechnicalContractsController",
+      "action": "ImportOrganizationSidecars",
+      "authorization_policies": [
+        "artifact.upload"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-ROBOT-ARTIFACT-TECHNICAL-CONTRACTS-BY-CONTRACTID-PUBLISH",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/robot-artifact-technical-contracts/{contractId:guid}/publish",
+      "controller": "ManagementRobotArtifactTechnicalContractsController",
+      "action": "PublishOrganization",
+      "authorization_policies": [
+        "artifact.upload"
+      ]
+    },
+    {
+      "id": "OP-REST-PUT-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-ROBOT-ARTIFACT-TECHNICAL-CONTRACTS-BY-CONTRACTID",
+      "transport": "REST",
+      "method": "PUT",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/robot-artifact-technical-contracts/{contractId:guid}",
+      "controller": "ManagementRobotArtifactTechnicalContractsController",
+      "action": "ReplaceOrganization",
+      "authorization_policies": [
+        "artifact.upload"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-ROBOT-ARTIFACT-TECHNICAL-CONTRACTS-BY-CONTRACTID-VALIDATION-PREVIEW",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/robot-artifact-technical-contracts/{contractId:guid}/validation-preview",
+      "controller": "ManagementRobotArtifactTechnicalContractsController",
+      "action": "ValidateOrganization",
+      "authorization_policies": [
+        "artifact.upload"
+      ]
+    },
+    {
+      "id": "OP-REST-PATCH-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-ROBOT-ARTIFACT-TECHNICAL-CONTRACTS-BY-CONTRACTID-RETIRE",
+      "transport": "REST",
+      "method": "PATCH",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/robot-artifact-technical-contracts/{contractId:guid}/retire",
+      "controller": "ManagementRobotArtifactTechnicalContractsController",
+      "action": "RetireOrganization",
+      "authorization_policies": [
+        "artifact.upload"
+      ]
+    },
+    {
+      "id": "OP-REST-DELETE-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-ROBOT-ARTIFACT-TECHNICAL-CONTRACTS-BY-CONTRACTID",
+      "transport": "REST",
+      "method": "DELETE",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/robot-artifact-technical-contracts/{contractId:guid}",
+      "controller": "ManagementRobotArtifactTechnicalContractsController",
+      "action": "DiscardOrganization",
+      "authorization_policies": [
+        "artifact.upload"
+      ]
+    },
+    {
+      "id": "OP-REST-PUT-API-V-BY-VERSION-MANAGEMENT-ROBOT-ARTIFACT-TEMPLATES-BY-TEMPLATEID-TECHNICAL-CONTRACT",
+      "transport": "REST",
+      "method": "PUT",
+      "route": "/api/v{version:apiVersion}/management/robot-artifact-templates/{templateId:guid}/technical-contract",
+      "controller": "ManagementRobotArtifactTechnicalContractsController",
+      "action": "AssignTemplate",
+      "authorization_policies": [
+        "artifact-template.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-PUT-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-ROBOT-ARTIFACTS-BY-ARTIFACTID-TECHNICAL-CONTRACT",
+      "transport": "REST",
+      "method": "PUT",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/robot-artifacts/{artifactId:guid}/technical-contract",
+      "controller": "ManagementRobotArtifactTechnicalContractsController",
+      "action": "AssignArtifact",
+      "authorization_policies": [
+        "artifact.upload"
+      ]
+    },
+    {
       "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-ROBOT-ARTIFACT-TEMPLATES",
       "transport": "REST",
       "method": "GET",
@@ -1637,10 +2946,10 @@
       ]
     },
     {
-      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ROBOT-ARTIFACT-TEMPLATES-BULK",
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ROBOT-ARTIFACT-TEMPLATES",
       "transport": "REST",
       "method": "POST",
-      "route": "/api/v{version:apiVersion}/management/robot-artifact-templates/bulk",
+      "route": "/api/v{version:apiVersion}/management/robot-artifact-templates",
       "controller": "ManagementRobotArtifactTemplatesController",
       "action": "BulkUpload",
       "authorization_policies": [
@@ -1689,6 +2998,120 @@
       "action": "Discard",
       "authorization_policies": [
         "artifact-template.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-ROBOT-AUTHORING-IMPORTS",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/robot-authoring-imports",
+      "controller": "ManagementRobotAuthoringImportsController",
+      "action": "Upload",
+      "authorization_policies": [
+        "artifact.upload"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-ROBOT-AUTHORING-IMPORTS-BY-IMPORTID",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/robot-authoring-imports/{importId:guid}",
+      "controller": "ManagementRobotAuthoringImportsController",
+      "action": "Get",
+      "authorization_policies": [
+        "program.read"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-ROBOT-AUTHORING-IMPORTS-BY-IMPORTID-WORKSPACE",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/robot-authoring-imports/{importId:guid}/workspace",
+      "controller": "ManagementRobotAuthoringImportsController",
+      "action": "GetWorkspace",
+      "authorization_policies": [
+        "program.read"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-ROBOT-AUTHORING-IMPORTS-BY-IMPORTID-VALIDATE",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/robot-authoring-imports/{importId:guid}/validate",
+      "controller": "ManagementRobotAuthoringImportsController",
+      "action": "Validate",
+      "authorization_policies": [
+        "artifact.upload"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-ROBOT-AUTHORING-IMPORTS-BY-IMPORTID-MATERIALIZE",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/robot-authoring-imports/{importId:guid}/materialize",
+      "controller": "ManagementRobotAuthoringImportsController",
+      "action": "Materialize",
+      "authorization_policies": [
+        "artifact.upload",
+        "program.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-ROBOT-AUTHORING-IMPORTS-BY-IMPORTID-DISCARD",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/robot-authoring-imports/{importId:guid}/discard",
+      "controller": "ManagementRobotAuthoringImportsController",
+      "action": "Discard",
+      "authorization_policies": [
+        "artifact.upload"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-ROBOT-AUTHORING-IMPORTS-BY-IMPORTID-PUBLISH-RESOURCES",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/robot-authoring-imports/{importId:guid}/publish-resources",
+      "controller": "ManagementRobotAuthoringImportsController",
+      "action": "PublishResources",
+      "authorization_policies": [
+        "artifact.upload",
+        "program.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-ROBOT-AUTHORING-IMPORTS-BY-IMPORTID-CREATE-RELEASE-DRAFT",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/robot-authoring-imports/{importId:guid}/create-release-draft",
+      "controller": "ManagementRobotAuthoringImportsController",
+      "action": "CreateReleaseDraft",
+      "authorization_policies": [
+        "release.publish"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-ROBOT-AUTHORING-IMPORTS-BY-IMPORTID-PREVIEW-COMPOSITION",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/robot-authoring-imports/{importId:guid}/preview-composition",
+      "controller": "ManagementRobotAuthoringImportsController",
+      "action": "PreviewComposition",
+      "authorization_policies": [
+        "artifact.upload",
+        "program.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-ROBOT-AUTHORING-IMPORTS-BY-IMPORTID-CONFIRM-COMPOSITION",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/robot-authoring-imports/{importId:guid}/confirm-composition",
+      "controller": "ManagementRobotAuthoringImportsController",
+      "action": "ConfirmComposition",
+      "authorization_policies": [
+        "artifact.upload",
+        "program.manage"
       ]
     },
     {
@@ -1896,6 +3319,61 @@
       "action": "DeleteMenuItem",
       "authorization_policies": [
         "menus.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-FRANCHISE-ONBOARDINGS",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/franchise-onboardings",
+      "controller": "ManagementFranchiseOnboardingsController",
+      "action": "List",
+      "authorization_policies": [
+        "stores.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-FRANCHISE-ONBOARDINGS",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/franchise-onboardings",
+      "controller": "ManagementFranchiseOnboardingsController",
+      "action": "Start",
+      "authorization_policies": [
+        "stores.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-GET-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-FRANCHISE-ONBOARDINGS-BY-ONBOARDINGID",
+      "transport": "REST",
+      "method": "GET",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/franchise-onboardings/{onboardingId:guid}",
+      "controller": "ManagementFranchiseOnboardingsController",
+      "action": "Get",
+      "authorization_policies": [
+        "stores.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-FRANCHISE-ONBOARDINGS-BY-ONBOARDINGID-RESUME",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/franchise-onboardings/{onboardingId:guid}/resume",
+      "controller": "ManagementFranchiseOnboardingsController",
+      "action": "Resume",
+      "authorization_policies": [
+        "stores.manage"
+      ]
+    },
+    {
+      "id": "OP-REST-POST-API-V-BY-VERSION-MANAGEMENT-ORGANIZATIONS-BY-ORGANIZATIONID-FRANCHISE-ONBOARDINGS-BY-ONBOARDINGID-CANCEL",
+      "transport": "REST",
+      "method": "POST",
+      "route": "/api/v{version:apiVersion}/management/organizations/{organizationId:guid}/franchise-onboardings/{onboardingId:guid}/cancel",
+      "controller": "ManagementFranchiseOnboardingsController",
+      "action": "Cancel",
+      "authorization_policies": [
+        "stores.manage"
       ]
     },
     {

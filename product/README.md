@@ -17,6 +17,8 @@ schemas, persistence, or Edge transport details.
 | Package installation, repair, and upgrade | [Production Package Lifecycle](journeys/PRODUCTION_PACKAGE_LIFECYCLE.md) |
 | Kiosk readiness, maintenance, deployment, and incident work | [Technical Operations Journey](journeys/TECHNICAL_OPERATIONS.md) |
 | Dashboard/workspace ownership | [Workspace And Dashboard Model](operating-model/WORKSPACE_AND_DASHBOARD_MODEL.md) |
+| Flow Manager scope and decision boundary | [Flow Manager Discovery](decisions/FLOW_MANAGER_DISCOVERY.md) |
+| Proposed read-only Flow Manager V1 | [Operations Flow Hub V1](journeys/OPERATIONS_FLOW_HUB_V1.md) |
 | Unresolved product choices | [Open Questions](decisions/OPEN_QUESTIONS.md) |
 
 ## Authority Rules

@@ -12,6 +12,7 @@ schemas, persistence, or Edge transport details.
 | Roles and scope | [Role And Scope Model](actors-and-scope/ROLE_AND_SCOPE_MODEL.md) |
 | Organization, store, kiosk ownership | [Operating Model](actors-and-scope/ORGANIZATION_STORE_KIOSK_OPERATING_MODEL.md) |
 | Customer order, fulfillment, and support | [Customer Journey](journeys/CUSTOMER_ORDER_AND_FULFILLMENT.md) |
+| Manager's scoped commercial and store-operations work | [Manager Store Operations](journeys/MANAGER_STORE_OPERATIONS.md) |
 | Fairino authoring | [Robot Authoring Journey](journeys/ROBOT_AUTHORING_WORKSPACE.md) |
 | Package installation, repair, and upgrade | [Production Package Lifecycle](journeys/PRODUCTION_PACKAGE_LIFECYCLE.md) |
 | Kiosk readiness, maintenance, deployment, and incident work | [Technical Operations Journey](journeys/TECHNICAL_OPERATIONS.md) |

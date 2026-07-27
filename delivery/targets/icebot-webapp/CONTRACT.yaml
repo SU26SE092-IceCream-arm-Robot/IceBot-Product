@@ -44,16 +44,25 @@ capabilities:
 
   - id: CAP-WEB-WORKSPACE-DASHBOARD
     flow: FLOW-MANAGEMENT-READ
-    actor: SystemAdmin, OrgAdmin, Manager, Staff, Technician
-    scope: effective selected scope
-    entry: dashboard and scoped navigation
-    backend_operations: [management GraphQL reads, scoped dashboard reads]
-    required_states: [loading, no assigned scope, no data, partial permission, stale/read failure]
-    evidence_targets: [src/app/(dashboard)/dashboard, src/lib/services/dashboard-overview.ts, src/components/features/dashboard]
+    actor: SystemAdmin, OrgAdmin, Manager, Technician
+    scope: backend-enforced effective assigned scope
+    entry: scoped workspace dashboard and navigation
+    backend_operations: [management GraphQL dashboard, order overview, kiosk overview, inventory summary, scoped navigation]
+    required_states: [loading, no effective access, no assigned data, valid zero counts, partial GraphQL data, request failure, destination unavailable]
+    evidence_targets: [src/app/(dashboard)/dashboard, src/lib/services/dashboard-overview.ts, src/components/features/dashboard, src/lib/rbac.ts, src/lib/auth-session.ts]
+
+  - id: CAP-WEB-MANAGEMENT-REPORTING
+    flow: FLOW-MANAGEMENT-READ
+    actor: SystemAdmin, OrgAdmin, Manager
+    scope: backend-enforced effective assigned scope
+    entry: scoped reports workspace
+    backend_operations: [client-composed scoped REST reads for stores, kiosks, orders, refunds, products, menus, inventory, and maintenance]
+    required_states: [loading, no assigned data, valid zero metrics, partial source success, source permission unavailable, request failure, truncated source warning, stale evidence]
+    evidence_targets: [src/app/(dashboard)/reports, src/lib/services/reports.ts, src/components/features/reports]
 
   - id: CAP-WEB-CATALOG-AND-MENU-AUTHORING
     flow: FLOW-CATALOG-RUNTIME-MENU
-    actor: SystemAdmin, OrgAdmin, Manager
+    actor: SystemAdmin, Manager
     scope: global or assigned organization/store/kiosk
     entry: product, variant, option, recipe, menu, and menu-item workspace
     backend_operations: [manage catalog, manage recipes, manage product options, manage menus, review sellability]
@@ -95,6 +104,15 @@ capabilities:
     backend_operations: [read topology/readiness, refill, adjust, rebind under policy, view history]
     required_states: [missing ingredient, inactive container, device unavailable, calibration missing, mutation conflict, history empty]
     evidence_targets: [src/app/(dashboard)/inventory, src/lib/services/inventory.ts, src/components/features/inventory]
+
+  - id: CAP-WEB-OPERATION-EVIDENCE
+    flow: FLOW-OPERATIONS-SUPPORT
+    actor: SystemAdmin, OrgAdmin, Manager, Staff, Technician
+    scope: assigned kiosk
+    entry: kiosk operational evidence and history
+    backend_operations: [read heartbeat history, device events, curated operation logs]
+    required_states: [no evidence, stale evidence, partial read failure, permission denied, diagnostics unavailable]
+    evidence_targets: ["src/app/(dashboard)/kiosks/[id]", src/lib/services/kiosk-telemetry.ts, src/components/features/kiosks]
 
   - id: CAP-WEB-TECHNICAL-DIAGNOSTICS
     flow: FLOW-OPERATIONS-SUPPORT

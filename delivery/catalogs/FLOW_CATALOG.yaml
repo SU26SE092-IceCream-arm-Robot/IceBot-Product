@@ -15,11 +15,11 @@ flows:
       IceBot-Mobile: [CAP-MOBILE-STAFF-IDENTITY-AND-SCOPE]
 
   - id: FLOW-MANAGEMENT-READ
-    title: Scoped management read models and dashboards
+    title: Scoped management workspaces, dashboards, and reports
     backend_flow: ../../../IceBot-Backend/docs/flows/MANAGEMENT_READ_FLOW.md
-    product_journey: ../../product/operating-model/WORKSPACE_AND_DASHBOARD_MODEL.md
+    product_journey: ../../product/journeys/MANAGER_STORE_OPERATIONS.md
     frontend:
-      IceBot-WebApp: [CAP-WEB-WORKSPACE-DASHBOARD]
+      IceBot-WebApp: [CAP-WEB-WORKSPACE-DASHBOARD, CAP-WEB-MANAGEMENT-REPORTING]
       IceBot-Kiosk: []
 
   - id: FLOW-CATALOG-RUNTIME-MENU
@@ -51,7 +51,7 @@ flows:
     backend_flow: ../../../IceBot-Backend/docs/flows/OPERATIONS_SUPPORT_FLOW.md
     product_journey: ../../product/journeys/TECHNICAL_OPERATIONS.md
     frontend:
-      IceBot-WebApp: [CAP-WEB-KIOSK-READINESS, CAP-WEB-INVENTORY-OPERATIONS, CAP-WEB-TECHNICAL-DIAGNOSTICS]
+      IceBot-WebApp: [CAP-WEB-KIOSK-READINESS, CAP-WEB-INVENTORY-OPERATIONS, CAP-WEB-OPERATION-EVIDENCE, CAP-WEB-TECHNICAL-DIAGNOSTICS]
       IceBot-Kiosk: []
 
   - id: FLOW-ALERT-LIFECYCLE

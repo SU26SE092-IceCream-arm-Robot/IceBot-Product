@@ -5,4 +5,56 @@ purpose: >-
   API/message behavior, or required client state changes in a way another
   repository must review. This is an impact ledger, not a commit log.
 
-changes: []
+changes:
+  - id: CHANGE-0001
+    title: Confirm full Manager Operations implementation for IceBot-WebApp
+    status: confirmed
+    changed_at: 2026-07-27
+    source: product/decisions/MANAGER_OPERATIONS_WORKSPACE_DECISION.md
+    impact: >-
+      Implement the complete current backend-supported Manager operating
+      surface as one task divided into phases, rather than a dashboard-only V1.
+    affected_flows:
+      - FLOW-BACK-OFFICE-SETUP
+      - FLOW-MANAGEMENT-READ
+      - FLOW-CATALOG-RUNTIME-MENU
+      - FLOW-CHECKOUT-EXECUTION
+      - FLOW-PRODUCTION-INCIDENT-RESOLUTION
+      - FLOW-OPERATIONS-SUPPORT
+      - FLOW-ALERT-LIFECYCLE
+      - FLOW-MAINTENANCE-TICKET
+      - FLOW-ROBOT-LUA-AUTHORING-IMPORT
+      - FLOW-ROBOT-LUA-DEPLOYMENT
+      - FLOW-PRODUCTION-PACKAGE-INSTALLATION
+      - FLOW-PRODUCTION-PACKAGE-UPGRADE
+      - FLOW-FAILURE-ROUTING
+    affected_targets:
+      IceBot-WebApp:
+        - CAP-WEB-IDENTITY-AND-SCOPE
+        - CAP-WEB-TENANT-ONBOARDING
+        - CAP-WEB-SETUP-READINESS
+        - CAP-WEB-WORKSPACE-DASHBOARD
+        - CAP-WEB-MANAGEMENT-REPORTING
+        - CAP-WEB-CATALOG-AND-MENU-AUTHORING
+        - CAP-WEB-ORDER-PAYMENT-OPERATIONS
+        - CAP-WEB-PRODUCTION-INCIDENT-RESOLUTION
+        - CAP-WEB-KIOSK-READINESS
+        - CAP-WEB-INVENTORY-OPERATIONS
+        - CAP-WEB-OPERATION-EVIDENCE
+        - CAP-WEB-ALERT-OPERATIONS
+        - CAP-WEB-MAINTENANCE-OPERATIONS
+        - CAP-WEB-GUIDED-ROBOT-AUTHORING
+        - CAP-WEB-RELEASE-AND-DEPLOYMENT
+        - CAP-WEB-PACKAGE-INSTALLATION
+        - CAP-WEB-PACKAGE-UPGRADE
+        - CAP-WEB-FAILURE-ROUTING
+    compatibility: >-
+      Frontend role aliases ADMIN, LOCATION_OWNER, and LocationOwner conflict
+      with the current role contract and must be removed during implementation.
+    required_review:
+      - Preserve all current-account effective role assignments.
+      - Audit every current Manager backend policy and operation before implementation.
+      - Complete all phases; Dashboard alone is not completion.
+      - Preserve workflow ownership, lifecycle, tenancy, and failure behavior.
+      - Keep future or Technician/SystemAdmin-only functions outside Manager scope.
+    implementation_packet: ../tasks/icebot-webapp/MANAGER_OPERATIONS_FULL_IMPLEMENTATION.md

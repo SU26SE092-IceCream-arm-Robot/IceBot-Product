@@ -38,27 +38,6 @@ by a backend handler, frontend screen, or task description.
 - Who owns and reviews the shared Product & Operations documents?
 - Which product decisions require a short decision record before implementation?
 
-## Flow Manager
-
-Confirmed on 2026-07-27:
-
-- V1 is a read-oriented composition named `Trung tam van hanh` inside the
-  existing Admin Web Dashboard.
-- V1 does not introduce a separate route or generic orchestration engine.
-
-Still unresolved:
-
-- Which actor and exact scope may see each included card?
-- Can a future Dashboard contract support organization/store filters without
-  changing the meaning of current aggregate counts?
-- Should Alerts and Maintenance aggregates be included after their contracts
-  are audited?
-- Should current-account access eventually return explicit policy codes for
-  client-side feature visibility?
-
-See [Flow Manager Discovery](FLOW_MANAGER_DISCOVERY.md) before proposing an
-endpoint, entity, screen, or automation trigger.
-
 ## Resolution Rule
 
 When an answer is chosen, create or update the owning product document and add

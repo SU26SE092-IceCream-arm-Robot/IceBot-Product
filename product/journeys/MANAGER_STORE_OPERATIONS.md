@@ -1,22 +1,17 @@
 # Manager Store Operations Journey
 
-This document defines the confirmed core responsibility of a `Manager`
-responsible for assigned organizations, stores, or kiosks and recommends the
-detailed operating workflow. It separates the Manager's normal business and
-operational work from on-site Staff work and technical work.
+This document defines the confirmed responsibility and complete current
+IceBot-WebApp implementation boundary of a `Manager` responsible for assigned
+organizations, stores, or kiosks. It separates normal business and operational
+work from on-site Staff work and Technician-only diagnostics.
 
 ## Status
 
-`Confirmed core responsibility with open technical-boundary decisions`.
+`Confirmed for full current-backend implementation`.
 
-Confirmed:
-
-- Manager monitors multiple assigned Kiosks, reviews sales/inventory/operations,
-  manages menu/pricing/promotions, and coordinates alerts and maintenance.
-
-The detailed operating loop below is the recommended implementation of those
-responsibilities. The four advanced technical permissions listed under Open
-Product Decisions remain unresolved.
+The delivery is one complete task divided into implementation phases. Dashboard,
+commercial operations, fulfillment, inventory, maintenance, packages, and
+deployment are not separate V1/V2 product versions.
 
 ## Operating Goal
 
@@ -196,6 +191,9 @@ the Manager has the required capability. Raw telemetry, command payloads,
 credentials, and low-level artifact composition do not belong in the normal
 Manager view.
 
+Dashboard is the attention and routing entry for this broader operating loop.
+It is not the boundary of the feature and does not own mutations.
+
 ## Required UI States
 
 - No assigned scope.
@@ -208,39 +206,26 @@ Manager view.
 - Recovery was requested but authoritative evidence has not arrived.
 - Package/release exists but is not active on the selected Kiosk.
 
-## Open Product Decisions
-
-The following current backend permissions are broader than the recommended
-default Manager journey and need explicit confirmation:
-
-1. Should `Manager` create, replace, retire, or provision Devices and execution
-   endpoints, or only view them and coordinate a Technician?
-2. Should `Manager` author/publish `RobotProgram`, or only select approved
-   programs through package/release workflows?
-3. Should `Manager` request deployment and rollback directly, or require
-   `OrgAdmin` approval while a Technician resolves readiness?
-4. Should `Manager` configure dispenser topology, or only manage stock/refill
-   while a Technician owns hardware/container bindings?
-
-Until these decisions are confirmed, frontend work should not make these
-technical actions prominent merely because the current backend policy permits
-them.
-
 ## Implementation Consequences
 
-- No new backend API is required to document the proposed operating loop.
-- Frontend work should compose existing scoped read models and commands into a
-  Manager task workspace instead of mirroring the controller list.
-- If the open decisions narrow Manager authority, backend authorization policies
-  and delivery contracts must be changed together; hiding a button is not an
-  authorization fix.
-- If the team confirms the existing broad authority, the UI must still separate
-  normal operations from an explicit advanced technical workspace.
+- No new backend API is required by this decision.
+- IceBot-WebApp must implement the complete set of current Manager-permitted
+  workflows as one phased delivery task.
+- Current Manager permissions for Device/endpoint management, RobotProgram
+  management, topology configuration, deployment, and rollback are included,
+  but must appear in clearly labelled advanced operations areas.
+- `OrgAdmin`-only artifact/release/package-fork actions and Technician-only raw
+  diagnostics remain separated by exact policy.
+- Any future narrowing of Manager authority requires a backend authorization and
+  Product contract change together; hiding a button is not an authorization
+  boundary.
 
 ## Related Sources
 
 - [Role And Scope Model](../actors-and-scope/ROLE_AND_SCOPE_MODEL.md)
 - [Workspace And Dashboard Model](../operating-model/WORKSPACE_AND_DASHBOARD_MODEL.md)
+- [Manager Operations Workspace Decision](../decisions/MANAGER_OPERATIONS_WORKSPACE_DECISION.md)
+- [Full IceBot-WebApp Implementation Task](../../delivery/tasks/icebot-webapp/MANAGER_OPERATIONS_FULL_IMPLEMENTATION.md)
 - [Customer Order And Fulfillment](CUSTOMER_ORDER_AND_FULFILLMENT.md)
 - [Technical Operations](TECHNICAL_OPERATIONS.md)
 - [Production Package Lifecycle](PRODUCTION_PACKAGE_LIFECYCLE.md)

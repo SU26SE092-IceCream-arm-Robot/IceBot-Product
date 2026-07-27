@@ -18,6 +18,7 @@ by the linked `IceBot-Backend/docs/` flow and contract documents.
 | Look up an Edge/Cloud message family | [Edge Message Catalog](catalogs/MESSAGE_CATALOG.yaml) |
 | Audit WebApp, Kiosk, Mobile, or IoT | [Targets](targets/README.md) |
 | Prepare work for any target or its AI | [Role Implementation Contract](playbooks/ROLE_IMPLEMENTATION_CONTRACT.md) |
+| Execute an assigned implementation packet | [Target Tasks](tasks/README.md) |
 | Ask an AI for an evidence-backed backlog | [AI Implementation Request](playbooks/AI_IMPLEMENTATION_REQUEST.md) |
 | Record and route a cross-repository contract change | [Contract Change Protocol](playbooks/CONTRACT_CHANGE_PROTOCOL.md) |
 | Challenge a proposed API/field/entity before implementing it | [Request Triage](playbooks/REQUEST_TRIAGE.md) |

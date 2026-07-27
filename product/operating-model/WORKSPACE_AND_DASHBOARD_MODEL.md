@@ -57,6 +57,12 @@ read models. REST remains the mutation and integration surface. A dashboard
 requirement must name the query/read model it needs and the command routes it
 is allowed to invoke.
 
+The confirmed implementation program for Organization and Store Operations is
+[Manager Store Operations](../journeys/MANAGER_STORE_OPERATIONS.md). Dashboard
+is its attention and routing entry, while mutations remain in their owning
+modules. The implementation is divided into delivery phases, not partial
+product versions.
+
 ## Empty And Failure States
 
 Every workspace task must design these states before implementation:
@@ -87,6 +93,7 @@ Out-of-scope data/actions
 
 - [Role And Scope Model](../actors-and-scope/ROLE_AND_SCOPE_MODEL.md)
 - [Customer Order And Fulfillment Flow](../journeys/CUSTOMER_ORDER_AND_FULFILLMENT.md)
+- [Manager Store Operations](../journeys/MANAGER_STORE_OPERATIONS.md)
 - [Task Readiness Template](../../delivery/playbooks/TASK_READINESS.md)
 - [Backend Management Read Flow](../../../IceBot-Backend/docs/flows/MANAGEMENT_READ_FLOW.md)
 - [Backend Authorization Rules](../../../IceBot-Backend/docs/api/AUTHORIZATION_RULES.md)

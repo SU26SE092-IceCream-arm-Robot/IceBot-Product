@@ -15,6 +15,8 @@ capabilities:
     status: unverified
   - id: CAP-WEB-WORKSPACE-DASHBOARD
     status: unverified
+  - id: CAP-WEB-MANAGEMENT-REPORTING
+    status: unverified
   - id: CAP-WEB-CATALOG-AND-MENU-AUTHORING
     status: unverified
   - id: CAP-WEB-ORDER-PAYMENT-OPERATIONS
@@ -24,6 +26,8 @@ capabilities:
   - id: CAP-WEB-KIOSK-READINESS
     status: unverified
   - id: CAP-WEB-INVENTORY-OPERATIONS
+    status: unverified
+  - id: CAP-WEB-OPERATION-EVIDENCE
     status: unverified
   - id: CAP-WEB-TECHNICAL-DIAGNOSTICS
     status: unverified
